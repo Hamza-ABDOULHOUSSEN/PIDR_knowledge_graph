@@ -21,15 +21,64 @@
     
 
 
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Bishops -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Bishops">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pieces"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Kings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Kings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pieces"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knights -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knights">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pieces"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#L_movement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#L_movement">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knight&apos;s_movement"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Movements"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Movements -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Movements"/>
     
 
 
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pieces"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pieces -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pieces"/>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Queen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Queen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pieces"/>
+    </owl:Class>
     
 
 
@@ -42,6 +91,411 @@
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Side -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Side"/>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Straight_movement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Straight_movement">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Towers&apos;s_movement"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Movements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Towers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Towers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pieces"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#diagonal_movement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#diagonal_movement">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Bishop&apos;s_movement"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Movements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Bishop&apos;s_movement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Bishop&apos;s_movement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Movements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#King&apos;s_movement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#King&apos;s_movement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Movements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knight&apos;s_movement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knight&apos;s_movement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Movements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawn&apos;s_movement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawn&apos;s_movement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Movements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Queen&apos;s_Movement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Queen&apos;s_Movement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Movements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Towers&apos;s_movement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Towers&apos;s_movement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Movements"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Side"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black_King -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black_King">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Kings"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black_queen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black_queen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Queen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Double_Forward -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Double_Forward">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawn&apos;s_movement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Move_forward -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Move_forward">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawn&apos;s_movement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Promotion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Promotion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawn&apos;s_movement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Side"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White_King -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White_King">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Kings"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White_queen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White_queen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Queen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#castle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#castle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knight&apos;s_movement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#eat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#eat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawn&apos;s_movement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#move_around -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#move_around">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knight&apos;s_movement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2b -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2b">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2c -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2c">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2d -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2d">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2e -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2e">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2f -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2f">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2g -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2g">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2h -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2h">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7a -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7a">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7b -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7b">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7c -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7c">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7d -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7d">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7e -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7e">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7f -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7f">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7g -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7g">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7h -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7h">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1A_Tower_w -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1A_Tower_w">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Towers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1B_Knight_w -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1B_Knight_w">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knights"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1C_Bishop_w -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1C_Bishop_w">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Bishops"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1F_Bishop_w -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1F_Bishop_w">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Bishops"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1G_Knight_w -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1G_Knight_w">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knights"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1H_Tower_w -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1H_Tower_w">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Towers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8A_Tower_b -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8A_Tower_b">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Towers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8B_Knight_b -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8B_Knight_b">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knights"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8C_Bishop_b -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8C_Bishop_b">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Bishops"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8F_Bishop_b -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8F_Bishop_b">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Bishops"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8G_Kight_b -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8G_Kight_b">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knights"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8H_Tower_b -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8H_Tower_b">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Towers"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
