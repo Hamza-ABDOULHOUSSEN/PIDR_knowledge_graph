@@ -21,6 +21,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#file -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#file">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Movements"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#conditions"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#is -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#is">
@@ -140,11 +149,57 @@
     
 
 
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#conditions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#conditions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Rules"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#diagonal_movement -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#diagonal_movement">
         <owl:equivalentClass rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Bishop&apos;s_movement"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Movements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#general_rules -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#general_rules">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Rules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#match -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#match"/>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#movement_condition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#movement_condition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#conditions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#promotion_condition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#promotion_condition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#movement_condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#win_condition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#win_condition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#conditions"/>
     </owl:Class>
     
 
@@ -308,6 +363,30 @@
     
 
 
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#no_end_out_of_the_board -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#no_end_out_of_the_board">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#general_rules"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#not_blocked -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#not_blocked">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#promotion_condition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#not_check -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#not_check">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#promotion_condition"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a">
@@ -448,6 +527,14 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7h">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
         <is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#seven_case -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#seven_case">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#promotion_condition"/>
     </owl:NamedIndividual>
     
 
