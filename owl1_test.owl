@@ -6,7 +6,9 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2">
+        <rdfs:comment>The chess ontology discribe chess rules</rdfs:comment>
+    </owl:Ontology>
     
 
 
@@ -59,10 +61,37 @@
     
 
 
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Q_movement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Q_movement">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Queen&apos;s_Movement"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Straight_movement"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Movements"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#diagonal_movement"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Movements"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Bishops -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Bishops">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pieces"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Kings"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knights"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Queen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Rook"/>
     </owl:Class>
     
 
@@ -77,6 +106,10 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Kings">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pieces"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knights"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Queen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Rook"/>
     </owl:Class>
     
 
@@ -85,6 +118,9 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knights">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pieces"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Queen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Rook"/>
     </owl:Class>
     
 
@@ -108,6 +144,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawns">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pieces"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Queen"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Rook"/>
     </owl:Class>
     
 
@@ -122,6 +160,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Queen">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pieces"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Rook"/>
     </owl:Class>
     
 
@@ -228,6 +267,10 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Bishop&apos;s_movement">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Movements"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#King&apos;s_movement"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knight&apos;s_movement"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawn&apos;s_movement"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Towers&apos;s_movement"/>
     </owl:Class>
     
 
@@ -236,6 +279,9 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#King&apos;s_movement">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Movements"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knight&apos;s_movement"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Queen&apos;s_Movement"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Towers&apos;s_movement"/>
     </owl:Class>
     
 
@@ -244,6 +290,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knight&apos;s_movement">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Movements"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Queen&apos;s_Movement"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Towers&apos;s_movement"/>
     </owl:Class>
     
 
@@ -280,6 +328,30 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#castle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#castle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#King&apos;s_movement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#eat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#eat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#King&apos;s_movement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#1_around -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#1_around">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#King&apos;s_movement"/>
+    </owl:NamedIndividual>
     
 
 
@@ -383,14 +455,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#castle -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#castle">
-        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knight&apos;s_movement"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#d -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#d">
@@ -443,14 +507,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#king_has_not_moved_yet">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#castle_condition"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#move_around -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#move_around">
-        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knight&apos;s_movement"/>
     </owl:NamedIndividual>
     
 
@@ -848,6 +904,997 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Rook"/>
         <is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black_King"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White_King"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black_queen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White_queen"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2c"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2d"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2e"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2f"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7a"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7c"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7d"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7e"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7f"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2c"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2d"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2e"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2f"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7a"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7c"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7d"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7e"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7f"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2d"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2e"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2f"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7a"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7c"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7d"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7e"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7f"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2e"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2f"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7a"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7c"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7d"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7e"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7f"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2e"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2f"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2e"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2e"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2e"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7a"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2e"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2e"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7c"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2e"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7d"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2e"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7e"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2e"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7f"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2e"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2e"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2f"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2f"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2f"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7a"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2f"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2f"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7c"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2f"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7d"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2f"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7e"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2f"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7f"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2f"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2f"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2g"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2g"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7a"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2g"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2g"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7c"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2g"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7d"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2g"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7e"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2g"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7f"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2g"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2g"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2h"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7a"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2h"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2h"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7c"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2h"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7d"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2h"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7e"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2h"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7f"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2h"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2h"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7c"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7d"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7e"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7f"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7a"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7c"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7d"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7e"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7f"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7d"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7e"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7f"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7e"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7f"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7e"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7f"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7e"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7e"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7f"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7g"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7f"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7g"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7h"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1A_Tower_w"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1H_Tower_w"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1A_Tower_w"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8A_Tower_b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1A_Tower_w"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8H_Tower_b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1B_Knight_w"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1G_Knight_w"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1B_Knight_w"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8B_Knight_b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1B_Knight_w"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8G_Kight_b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1C_Bishop_w"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1F_Bishop_w"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1C_Bishop_w"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8C_Bishop_b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1C_Bishop_w"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8F_Bishop_b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1F_Bishop_w"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8C_Bishop_b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1F_Bishop_w"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8F_Bishop_b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1G_Knight_w"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8B_Knight_b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1G_Knight_w"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8G_Kight_b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1H_Tower_w"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8A_Tower_b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1H_Tower_w"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8H_Tower_b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8A_Tower_b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8H_Tower_b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8B_Knight_b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8G_Kight_b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8C_Bishop_b"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8F_Bishop_b"/>
+        </owl:distinctMembers>
+    </rdf:Description>
 </rdf:RDF>
 
 
