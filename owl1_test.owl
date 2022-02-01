@@ -5,7 +5,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:chess-ontology-2="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2">
         <rdfs:comment>The chess ontology discribe chess rules</rdfs:comment>
     </owl:Ontology>
@@ -537,6 +538,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black_King">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Kings"/>
+        <chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#e"/>
+        <chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8"/>
         <is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black"/>
     </owl:NamedIndividual>
     
@@ -546,6 +549,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black_queen">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Queen"/>
+        <chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#d"/>
+        <chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8"/>
         <is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black"/>
     </owl:NamedIndividual>
     
@@ -587,6 +592,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White_King">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Kings"/>
+        <chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#e"/>
+        <chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1"/>
         <is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White"/>
     </owl:NamedIndividual>
     
@@ -596,6 +603,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White_queen">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Queen"/>
+        <chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#d"/>
+        <chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1"/>
         <is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White"/>
     </owl:NamedIndividual>
     
@@ -915,6 +924,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1A_Tower_w">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Rook"/>
+        <chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#a"/>
+        <chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1"/>
         <is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White"/>
     </owl:NamedIndividual>
     
@@ -924,6 +935,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1B_Knight_w">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knights"/>
+        <chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#b"/>
+        <chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1"/>
         <is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White"/>
     </owl:NamedIndividual>
     
@@ -933,6 +946,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1C_Bishop_w">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Bishops"/>
+        <chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#c"/>
+        <chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1"/>
         <is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White"/>
     </owl:NamedIndividual>
     
@@ -942,6 +957,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1F_Bishop_w">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Bishops"/>
+        <chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#f"/>
+        <chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1"/>
         <is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White"/>
     </owl:NamedIndividual>
     
@@ -951,6 +968,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1G_Knight_w">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knights"/>
+        <chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#g"/>
+        <chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1"/>
         <is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White"/>
     </owl:NamedIndividual>
     
@@ -960,6 +979,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1H_Tower_w">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Rook"/>
+        <chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#h"/>
+        <chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1"/>
         <is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White"/>
     </owl:NamedIndividual>
     
@@ -1025,6 +1046,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8A_Tower_b">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Rook"/>
+        <chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#a"/>
+        <chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8"/>
         <is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black"/>
     </owl:NamedIndividual>
     
@@ -1034,6 +1057,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8B_Knight_b">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knights"/>
+        <chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#b"/>
+        <chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8"/>
         <is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black"/>
     </owl:NamedIndividual>
     
@@ -1043,6 +1068,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8C_Bishop_b">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Bishops"/>
+        <chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#c"/>
+        <chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8"/>
         <is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black"/>
     </owl:NamedIndividual>
     
@@ -1052,6 +1079,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8F_Bishop_b">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Bishops"/>
+        <chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#f"/>
+        <chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8"/>
         <is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black"/>
     </owl:NamedIndividual>
     
@@ -1061,6 +1090,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8G_Kight_b">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Knights"/>
+        <chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#g"/>
+        <chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8"/>
         <is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black"/>
     </owl:NamedIndividual>
     
@@ -1070,6 +1101,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8H_Tower_b">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Rook"/>
+        <chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#h"/>
+        <chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#8"/>
         <is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black"/>
     </owl:NamedIndividual>
     
