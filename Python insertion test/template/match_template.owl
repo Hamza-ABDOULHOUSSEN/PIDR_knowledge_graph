@@ -1,0 +1,9 @@
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#${match_name} -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#${match_name}">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#match"/>
+        <chess-ontology-2:File_general_rules rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#no_piece_end_out_of_the_board"/>
+        <chess-ontology-2:File_general_rules rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#players_make_a_move_one_after_another"/>
+        <chess-ontology-2:first_move rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#${match_name}_move1"/>
+    </owl:NamedIndividual>
+    
