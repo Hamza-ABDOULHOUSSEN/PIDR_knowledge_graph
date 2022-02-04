@@ -457,10 +457,6 @@
 	<chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#4"/>
 	<chess-ontology-2:is_describe_as rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#move_in_diagonal"/>
 </rdf:Description>
-
-<rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#move_in_diagonal">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</rdf:Description>
 <!--  -->
 <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Scholar_mate_move4 -->
 
@@ -472,10 +468,6 @@
 	<chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#c"/>
 	<chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#6"/>
 	<chess-ontology-2:is_describe_as rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#move_in_L_2_square_height_and_1_square_width"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#move_in_L_2_square_height_and_1_square_width">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </rdf:Description>
 <!--  -->
 <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Scholar_mate_move5 -->
@@ -560,7 +552,6 @@
 
 <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#match_move1">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves"/>
 	<chess-ontology-2:MovingPiece rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2f"/>
 	<chess-ontology-2:NextMove rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#match_move2"/>
 	<chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#f"/>
@@ -572,21 +563,18 @@
 
 <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#match_move2">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves"/>
 </rdf:Description>
 <!--  -->
 <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#match_move3 -->
 
 <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#match_move3">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves"/>
 </rdf:Description>
 <!--  -->
 <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#match_move4 -->
 
 <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#match_move4">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves"/>
 </rdf:Description>
 <!--  -->
 <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#move_in_L_2_square_height_and_1_square_width -->
@@ -654,7 +642,74 @@
 	<rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#match"/>
 	<chess-ontology-2:File_general_rules rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#no_piece_end_out_of_the_board"/>
 	<chess-ontology-2:File_general_rules rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#players_make_a_move_one_after_another"/>
-	<chess-ontology-2:first_move rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#match_move1"/>
+	<chess-ontology-2:first_move rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#shortest_game_move1"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#shortest_game_move1 -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#shortest_game_move1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves"/>
+	<chess-ontology-2:MovingPiece rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p2e"/>
+	<chess-ontology-2:NextMove rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#shortest_game_move2"/>
+	<chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#e"/>
+	<chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#4"/>
+	<chess-ontology-2:is_describe_as rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Double_Forward"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#shortest_game_move2 -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#shortest_game_move2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves"/>
+	<chess-ontology-2:MovingPiece rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#p7e"/>
+	<chess-ontology-2:NextMove rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#shortest_game_move3"/>
+	<chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#e"/>
+	<chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#5"/>
+	<chess-ontology-2:is_describe_as rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Double_Forward"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#shortest_game_move3 -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#shortest_game_move3">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves"/>
+	<chess-ontology-2:MovingPiece rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White_queen"/>
+	<chess-ontology-2:NextMove rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#shortest_game_move4"/>
+	<chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#h"/>
+	<chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#5"/>
+	<chess-ontology-2:is_describe_as rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#move_in_diagonal"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#shortest_game_move4 -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#shortest_game_move4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves"/>
+	<chess-ontology-2:MovingPiece rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Black_King"/>
+	<chess-ontology-2:NextMove rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#shortest_game_move5"/>
+	<chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#e"/>
+	<chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#7"/>
+	<chess-ontology-2:is_describe_as rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1_around"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1_around">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#shortest_game_move5 -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#shortest_game_move5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves"/>
+	<chess-ontology-2:MovingPiece rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White_queen"/>
+	<chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#e"/>
+	<chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#5"/>
+	<chess-ontology-2:is_describe_as rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#queen_take"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#queen_take">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 </rdf:Description>
 <!--  -->
 <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#square_is_free -->
@@ -823,8 +878,16 @@
 </rdf:Description>
 <!--  -->
 <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#move_in_L_2_square_height_and_1_square_width -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#move_in_L_2_square_height_and_1_square_width">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
 <!--  -->
 <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#move_in_diagonal -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#move_in_diagonal">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
 <!--  -->
 <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#no_piece_end_out_of_the_board -->
 
@@ -996,6 +1059,8 @@
 	<rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#general_rules"/>
 </rdf:Description>
 <!--  -->
+<!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#queen_take -->
+<!--  -->
 <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#rook_has_not_moved_yet -->
 
 <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#rook_has_not_moved_yet">
@@ -1090,6 +1155,8 @@
 	<chess-ontology-2:startRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1"/>
 	<is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#White"/>
 </rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#1_around -->
 <!--  -->
 <!-- http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#2 -->
 
