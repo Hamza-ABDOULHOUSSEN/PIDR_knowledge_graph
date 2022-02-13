@@ -27,5 +27,6 @@ this folder contains the python script to add match in the ontology
 This is the ontology test created about chess knowledge
 
 ## 1.3. useful link and documents
-[Knowledge Graph Conferences](https://www.youtube.com/watch?v=bvwjG-3qAmY&list=PLDhh0lALedc7LC_5wpi5gDnPRnu1GSyRG)
+- [Knowledge Graph Conferences](https://www.youtube.com/watch?v=bvwjG-3qAmY&list=PLDhh0lALedc7LC_5wpi5gDnPRnu1GSyRG)
+- [Add VOWL dependencies for ontology visualizations](http://vowl.visualdataweb.org/protegevowl.html)
 
