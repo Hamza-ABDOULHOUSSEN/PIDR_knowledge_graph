@@ -29,4 +29,6 @@ This is the ontology test created about chess knowledge
 ## 1.3. useful link and documents
 - [Knowledge Graph Conferences](https://www.youtube.com/watch?v=bvwjG-3qAmY&list=PLDhh0lALedc7LC_5wpi5gDnPRnu1GSyRG)
 - [Add VOWL dependencies for ontology visualizations](http://vowl.visualdataweb.org/protegevowl.html)
-
+- [Chess Ontology online example](https://people.cs.ksu.edu/~hitzler/pub2/01-chess-example.pdf)
+- [Python Chess library](https://python-chess.readthedocs.io/en/latest/)
+- [Owlready documentation (ontology-oriented programming in Python)](https://pythonhosted.org/Owlready/index.html)
