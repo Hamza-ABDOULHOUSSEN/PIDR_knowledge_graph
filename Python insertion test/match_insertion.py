@@ -1,7 +1,7 @@
 import string
 
 # constant
-line_to_write = 8    # the number of lines after the individual in the source code   
+line_to_write = 5    # the number of lines after the individual in the source code   
 
 # generate the owl code with the template for match_moves
 def generate_match_move_to_owl(num, match_name, piece, file, rank, description, next_move_num):
@@ -43,7 +43,7 @@ def main():
         print("k :"+str(k))
         line = lines[k]
 
-        if line == "    // Individuals\n":
+        if line == "<!-- #    Individuals -->\n":
             Indivuals_find = True
         if Indivuals_find:
             line_after_individuals += 1
@@ -59,7 +59,7 @@ def main():
 
     end_input = False
 
-    k = 1
+    num = 1
     while not(end_input):
         print()
         piece = input("Piece : ")
@@ -72,14 +72,14 @@ def main():
 
         if next_move == "no":
             end_input = True
-            match_move = generate_last_match_move_to_owl(str(k), match_name, piece, file, rank, description)
+            match_move = generate_last_match_move_to_owl(str(num), match_name, piece, file, rank, description)
 
         else:
-            match_move = generate_match_move_to_owl(str(k), match_name, piece, file, rank, description, str(k+1))
+            match_move = generate_match_move_to_owl(str(num), match_name, piece, file, rank, description, str(num+1))
 
         new_ontology.write(match_move)
         
-        k+=1
+        num+=1
 
     # add the rest of the code
     n = len(lines)
