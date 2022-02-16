@@ -1,20 +1,20 @@
 import string
 
 # constant
-line_to_write = 5    # the number of lines after the individual in the source code   
+line_to_write = 8    # the number of lines after the individual in the source code
 
 # generate the owl code with the template for match_moves
-def generate_match_move_to_owl(num, match_name, piece, file, rank, description, next_move_num):
+def generate_match_move_to_owl(num, match_name, piece, cell, next_move_num):
     with open("template/match_move_template.owl") as t:
         template = string.Template(t.read())
-        match_move = template.substitute(num=num, match_name=match_name, piece=piece, file=file, rank=rank, description=description, next_move_num=next_move_num)
+        match_move = template.substitute(num=num, match_name=match_name, piece=piece, cell=cell, next_move_num=next_move_num)
 
     return match_move
 
-def generate_last_match_move_to_owl(num, match_name, piece, file, rank, description):
+def generate_last_match_move_to_owl(num, match_name, piece, cell):
     with open("template/last_match_move_template.owl") as t:
         template = string.Template(t.read())
-        match_move = template.substitute(num=num, match_name=match_name, piece=piece, file=file, rank=rank, description=description)
+        match_move = template.substitute(num=num, match_name=match_name, piece=piece, cell=cell)
 
     return match_move
 
@@ -39,11 +39,9 @@ def main():
 
     # copy of the code until the individuals part
     while line_after_individuals != line_to_write:
-        print(line)
-        print("k :"+str(k))
         line = lines[k]
 
-        if line == "<!-- #    Individuals -->\n":
+        if line == "    // Individuals\n":
             Indivuals_find = True
         if Indivuals_find:
             line_after_individuals += 1
@@ -66,16 +64,16 @@ def main():
         square = input("Square : ")
         file = square[0]
         rank = square[1]
-        description = input("Description : ")
+        #description = input("Description : ")
         
         next_move = input("Next move (press 'no' to end) : ")
 
         if next_move == "no":
             end_input = True
-            match_move = generate_last_match_move_to_owl(str(num), match_name, piece, file, rank, description)
+            match_move = generate_last_match_move_to_owl(str(num), match_name, piece, square)
 
         else:
-            match_move = generate_match_move_to_owl(str(num), match_name, piece, file, rank, description, str(num+1))
+            match_move = generate_match_move_to_owl(str(num), match_name, piece, square, str(num+1))
 
         new_ontology.write(match_move)
         

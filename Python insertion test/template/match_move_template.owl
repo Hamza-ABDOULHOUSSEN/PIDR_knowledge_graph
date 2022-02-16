@@ -1,11 +1,11 @@
-<!--  -->
-<!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#${match_name}_move${num} -->
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#${match_name}_move${num} -->
 
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#${match_name}_move${num}">
-    <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves"/>
-    <chess-ontology-2:MovingPiece rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#${piece}"/>
-    <chess-ontology-2:ToFile rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#${file}"/>
-    <chess-ontology-2:ToRank rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#${rank}"/>
-    <chess-ontology-2:is_describe_as rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#${description}"/>
-    <chess-ontology-2:NextMove rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#${match_name}_move${next_move_num}"/>
-</owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#${match_name}_move${num}">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves"/>
+        <chess-ontology-2:Moving_Piece rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#${piece}"/>
+        <chess-ontology-2:To_cell rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#${cell}"/>
+        <chess-ontology-2:Next_move rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#${match_name}_move${next_move_num}"/>
+    </owl:NamedIndividual>
+
+
+
