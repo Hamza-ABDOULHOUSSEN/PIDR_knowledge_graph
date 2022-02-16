@@ -1,0 +1,8 @@
+# Pycharm
+.idea
+
+# Visual Studio Code
+.vscode
+
+# System Files
+*.DS_Store
