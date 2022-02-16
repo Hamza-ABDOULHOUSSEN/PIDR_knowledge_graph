@@ -39,6 +39,8 @@ def main():
 
     # copy of the code until the individuals part
     while line_after_individuals != line_to_write:
+        print(line)
+        print("k :"+str(k))
         line = lines[k]
 
         if line == "    // Individuals\n":
