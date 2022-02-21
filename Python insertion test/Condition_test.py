@@ -5,7 +5,7 @@ rank_list=['a','b','c','d','e','f','g','h']
 class conditions(Thing):
     ontology = onto
     def check_out_the_board(self):
-        if self.file<0 or self.file>9:
+        if self.file<=0 or self.file>=9:
             return "false"
         if self.rank not in rank_list:
             return "false"
@@ -15,14 +15,14 @@ class conditions(Thing):
 
 class has_file(FunctionalProperty):
     ontology = onto
-    domain   = [conditions]
-    range    = [int]
+    domain = [conditions]
+    range = [int]
 ANNOTATIONS[has_file]["python_name"] = "file"
 
 class has_rank(FunctionalProperty):
     ontology = onto
-    domain   = [conditions]
-    range    = [str]
+    domain = [conditions]
+    range = [str]
 ANNOTATIONS[has_rank]["python_name"] = "rank"
 
 my_test = conditions("my_drug", file=4,  rank= 'c')
