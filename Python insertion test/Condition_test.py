@@ -1,6 +1,6 @@
 from owlready import *
 
-onto = Ontology("Chess Ontology.owl")
+onto = Ontology("Chess_Ontology.owl")
 rank_list=['a','b','c','d','e','f','g','h']
 class conditions(Thing):
     ontology = onto

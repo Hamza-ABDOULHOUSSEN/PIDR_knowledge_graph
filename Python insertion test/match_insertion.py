@@ -28,8 +28,8 @@ def generate_match_to_owl(match_name):
 
 # copy the code of the ontology and add the matches for each input
 def main():
-    ontology = open("Chess Ontology.owl", "r", encoding="utf-8")
-    new_ontology = open("Chess Ontology new_version.owl", "w", encoding="utf-8")
+    ontology = open("Chess_Ontology.owl", "r", encoding="utf-8")
+    new_ontology = open("Chess_Ontology_new_version.owl", "w", encoding="utf-8")
 
     Indivuals_find = False
     line_after_individuals = 0
