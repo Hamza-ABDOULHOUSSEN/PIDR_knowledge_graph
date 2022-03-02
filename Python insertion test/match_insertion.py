@@ -1,8 +1,5 @@
 import string
 
-# constant
-line_to_write = 8    # the number of lines after the individual in the source code
-
 # generate the owl code with the template for match_moves
 def generate_match_move_to_owl(num, match_name, piece, cell, next_move_num):
     with open("template/match_move_template.owl") as t:
@@ -32,22 +29,20 @@ def main():
     new_ontology = open("Chess_Ontology_new_version.owl", "w", encoding="utf-8")
 
     Indivuals_find = False
-    line_after_individuals = 0
 
     k = 0
     lines = ontology.readlines()
 
     # copy of the code until the individuals part
-    while line_after_individuals != line_to_write:
+    while not Indivuals_find:
         line = lines[k]
+        line_words = line.split(' ')
 
-        if line == "    // Individuals\n":
+        if "<owl:NamedIndividual" in line_words:
             Indivuals_find = True
-        if Indivuals_find:
-            line_after_individuals += 1
-        
-        new_ontology.write(line)
-        k += 1
+        else:
+            new_ontology.write(line)
+            k += 1
 
     # add new match
     print()
