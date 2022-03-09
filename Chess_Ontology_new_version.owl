@@ -121,14 +121,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Pawn_has_not_move_yet -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Pawn_has_not_move_yet">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Promoted_to -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Promoted_to">
@@ -357,14 +349,6 @@ Castling is still permitted if the rook is under attack, or if the rook crosses 
     
 
 
-    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#King_side_castle -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#King_side_castle">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Castle"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves">
@@ -423,14 +407,6 @@ Castling is still permitted if the rook is under attack, or if the rook crosses 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Promotion">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Pawn&apos;s_movement"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When a pawn advances to its eighth rank, as part of the move, it is promoted and must be exchanged for the player&apos;s choice of queen, rook, bishop, or knight of the same color.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Queen_side_castle -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Queen_side_castle">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Castle"/>
     </owl:Class>
     
 
