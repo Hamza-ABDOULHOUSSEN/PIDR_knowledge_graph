@@ -32,4 +32,8 @@ This is the ontology test created about chess knowledge
 - [Chess Ontology online example](https://people.cs.ksu.edu/~hitzler/pub2/01-chess-example.pdf)
 - [Python Chess library](https://python-chess.readthedocs.io/en/latest/)
 - [Owlready documentation (ontology-oriented programming in Python)](https://pythonhosted.org/Owlready/index.html)
-- [Chess documentation] https://en.wikipedia.org/wiki/Chess
+- [Chess documentation](https://en.wikipedia.org/wiki/Chess)
+- [Neo4j create graph](https://neo4j.com/docs/graph-data-science/current/graph-create/)
+- [Neo4j build graph from ontologies](https://neo4j.com/developer/graph-data-science/build-knowledge-graph-nlp-ontologies/)
+  
+  
