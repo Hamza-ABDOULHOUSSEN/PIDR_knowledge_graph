@@ -35,5 +35,6 @@ This is the ontology test created about chess knowledge
 - [Chess documentation](https://en.wikipedia.org/wiki/Chess)
 - [Neo4j create graph](https://neo4j.com/docs/graph-data-science/current/graph-create/)
 - [Neo4j build graph from ontologies](https://neo4j.com/developer/graph-data-science/build-knowledge-graph-nlp-ontologies/)
+- [Noe4j add ontologies](https://neo4j.com/labs/neosemantics/4.0/importing-ontologies/)
   
   
