@@ -53,7 +53,24 @@ def generate_all_subclass_properties(graph, ontology_path):
         obj_classe = classes[obj_iri]
         obj_classe.add_subclass(sub_classe)
 
+def generate_triple_list(ontology_path):
+    liste_triple = []
+
+    # this request generate all pairs of iri (subject, object) where subject is a subclass of object
+    subclasses_pairs = list(default_world.sparql("""
+                   SELECT ?subject ?object
+    	                WHERE { ?subject rdfs:subClassOf ?object }
+            """))
+
+    for (sub_iri, obj_iri) in subclasses_pairs:
+        sub_iri = str(sub_iri)
+        obj_iri = str(obj_iri)
+        liste_triple.append((sub_iri, "SUBCLASSOF", obj_iri))
+
+    return liste_triple
+
 def main():
+
     chess = graph(name="chess")
 
     generate_all_classes(chess, ONTOLOGY)
@@ -61,16 +78,21 @@ def main():
     generate_all_subclass_properties(chess, ONTOLOGY)
 
     # TRY TO PRINT ALL GRAPH INFO
-    chess.print_all()
+    #chess.print_all()
 
-    print("====================================================================")
-    print("====================================================================")
+    #print("====================================================================")
+    #print("====================================================================")
 
     # TRY TO PRINT PIECES SUBCLASSES
-    pieces_iri = "Chess_Ontology.Pieces"
-    pieces_classe = chess.get_classes()[pieces_iri]
+    #pieces_iri = "Chess_Ontology.Pieces"
+    #pieces_classe = chess.get_classes()[pieces_iri]
 
-    pieces_classe.print_all()
+    #pieces_classe.print_all()
+    
+    triple_list = generate_triple_list(ONTOLOGY)
+
+    for t in triple_list:
+        print(t)
 
 
 if __name__ == '__main__':
