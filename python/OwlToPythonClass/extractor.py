@@ -2,7 +2,7 @@ from owlready2 import *
 from OwlToPythonClass.owl_object import *
 
 ONTOLOGY = "file://resource/Chess_Ontology.owl"
-PRINT_INFO = 1         # 0 for no and 1 for yes
+PRINT_INFO = 0         # 0 for no and 1 for yes
 
 def get_all_classes():
 
