@@ -80,6 +80,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Is_check">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Kings"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves"/>
         <rdfs:comment>if King is check, the notation of the move have a &quot;+&quot; at the end</rdfs:comment>
     </owl:ObjectProperty>
     
