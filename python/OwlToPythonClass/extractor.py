@@ -1,8 +1,8 @@
 from owlready2 import *
 from OwlToPythonClass.owl_object import *
 
-ONTOLOGY = "file://resource/Chess_Ontology.owl"
-PRINT_INFO = 0         # 0 for no and 1 for yes
+ONTOLOGY = "file://resource/Geography.owl"
+PRINT_INFO = 1         # 0 for no and 1 for yes
 
 def get_all_classes():
 
@@ -67,6 +67,25 @@ def generate_triple_list_subclass():
 
     return liste_triple
 
+def generate_triple_list_individuals():
+    liste_triple = []
+
+    # this request generate all pairs of iri (ind, cla) where ind is an individual of the class cla
+    subclasses_pairs = list(default_world.sparql("""
+                   SELECT ?individual ?class
+    	                WHERE { 
+    	                ?individual rdf:type owl:NamedIndividual .
+                        ?class rdf:type owl:Class .
+    	                ?individual rdf:type ?class }
+            """))
+
+    for (ind_iri, cla_iri) in subclasses_pairs:
+        ind_iri = str(ind_iri)
+        cla_iri = str(cla_iri)
+        liste_triple.append((ind_iri, "INDIVIDUALS OF", cla_iri))
+
+    return liste_triple
+
 def generate_triple_list_object_properties():
     liste_triple = []
 
@@ -114,6 +133,8 @@ def main():
     # load the ontology
     get_ontology(ONTOLOGY).load()
 
+    '''
+
     chess = graph(name="chess")
 
     generate_all_classes(chess)
@@ -124,20 +145,24 @@ def main():
     pieces_iri = "Chess_Ontology.Pieces"
     pieces_classe = chess.get_classes()[pieces_iri]
     
+    '''
+    
     triple_list = generate_triple_list_subclass()
+
+    individuals = generate_triple_list_individuals()
 
     properties = generate_triple_list_object_properties()
 
     if PRINT_INFO:
         # TRY TO PRINT ALL GRAPH INFO
-        chess.print_all()
+        #chess.print_all()
 
         print()
         print("====================================================================")
         print("====================================================================")
 
         # TRY TO PRINT PIECES SUBCLASSES
-        pieces_classe.print_all()
+        #pieces_classe.print_all()
 
         print()
         print("====================================================================")
@@ -147,6 +172,16 @@ def main():
         # TRY TO PRINT TRIPLE_LIST FOR SUBCLASS
         for t in triple_list:
             print(t)
+
+        print()
+        print("====================================================================")
+        print("===================  INDIVIDUALS TRIPLES ===================")
+        print("====================================================================")
+
+        # TRY TO PRINT TRIPLE_LIST FOR INDIVIDUALS
+        for t in individuals:
+            print(t)
+
 
         print()
         print("====================================================================")
