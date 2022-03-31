@@ -44,6 +44,7 @@ At each push, the tests are launched automatically and we can see the results in
 - [Chess documentation](https://en.wikipedia.org/wiki/Chess)
 - [Neo4j create graph](https://neo4j.com/docs/graph-data-science/current/graph-create/)
 - [Neo4j build graph from ontologies](https://neo4j.com/developer/graph-data-science/build-knowledge-graph-nlp-ontologies/)
-- [Noe4j add ontologies](https://neo4j.com/labs/neosemantics/4.0/importing-ontologies/)
+- [Noe4j add ontologies][paper for constraint](https://neo4j.com/labs/neosemantics/4.0/importing-ontologies/)
+- [paper for constraint]https://alammehwish.github.io/dl4kg_eswc_2020/papers/paper3.pdf
   
   
