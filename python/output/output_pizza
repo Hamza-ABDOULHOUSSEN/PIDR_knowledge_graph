@@ -1,0 +1,1602 @@
+<rdf:Description rdf:about="pizza.American">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.American">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.American">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.PeperoniSausageTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.American">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.American">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.MozzarellaTopping | pizza.PeperoniSausageTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.American">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasCountryOfOrigin.value(pizza.America)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.AmericanHot">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.AmericanHot">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.HotGreenPepperTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.AmericanHot">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.JalapenoPepperTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.AmericanHot">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.AmericanHot">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.PeperoniSausageTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.AmericanHot">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.AmericanHot">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.HotGreenPepperTopping | pizza.JalapenoPepperTopping | pizza.MozzarellaTopping | pizza.PeperoniSausageTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.AmericanHot">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasCountryOfOrigin.value(pizza.America)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.AnchoviesTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.FishTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.ArtichokeTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.VegetableTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.ArtichokeTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.AsparagusTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.VegetableTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.AsparagusTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Cajun">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Cajun">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Cajun">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.OnionTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Cajun">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.PeperonataTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Cajun">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.PrawnsTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Cajun">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TobascoPepperSauce)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Cajun">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Cajun">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.MozzarellaTopping | pizza.OnionTopping | pizza.PeperonataTopping | pizza.PrawnsTopping | pizza.TobascoPepperSauce | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.CajunSpiceTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.HerbSpiceTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.CajunSpiceTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Hot)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.CaperTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.VegetableTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.CaperTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Capricciosa">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Capricciosa">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.AnchoviesTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Capricciosa">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.CaperTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Capricciosa">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.HamTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Capricciosa">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Capricciosa">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.OliveTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Capricciosa">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.PeperonataTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Capricciosa">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Capricciosa">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.AnchoviesTopping | pizza.CaperTopping | pizza.HamTopping | pizza.MozzarellaTopping | pizza.OliveTopping | pizza.PeperonataTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Caprina">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Caprina">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.GoatsCheeseTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Caprina">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Caprina">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.SundriedTomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Caprina">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Caprina">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.GoatsCheeseTopping | pizza.MozzarellaTopping | pizza.SundriedTomatoTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.CheeseTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.PizzaTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.CheeseyVegetableTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.CheeseTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.CheeseyVegetableTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.VegetableTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.ChickenTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.MeatTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.ChickenTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.DeepPanBase">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.PizzaBase"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Fiorentina">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Fiorentina">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.GarlicTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Fiorentina">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Fiorentina">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.OliveTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Fiorentina">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.ParmesanTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Fiorentina">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.SpinachTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Fiorentina">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Fiorentina">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.GarlicTopping | pizza.MozzarellaTopping | pizza.OliveTopping | pizza.ParmesanTopping | pizza.SpinachTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FishTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.PizzaTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FishTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Food">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.DomainConcept"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FourCheesesTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.CheeseTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FourCheesesTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FourSeasons">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FourSeasons">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.AnchoviesTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FourSeasons">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.CaperTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FourSeasons">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FourSeasons">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MushroomTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FourSeasons">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.OliveTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FourSeasons">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.PeperoniSausageTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FourSeasons">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FourSeasons">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.AnchoviesTopping | pizza.CaperTopping | pizza.MozzarellaTopping | pizza.MushroomTopping | pizza.OliveTopping | pizza.PeperoniSausageTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FruitTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.PizzaTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FruttiDiMare">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FruttiDiMare">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.GarlicTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FruttiDiMare">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MixedSeafoodTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FruttiDiMare">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.FruttiDiMare">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.GarlicTopping | pizza.MixedSeafoodTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.GarlicTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.VegetableTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.GarlicTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Medium)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Giardiniera">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Giardiniera">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.LeekTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Giardiniera">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Giardiniera">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MushroomTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Giardiniera">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.OliveTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Giardiniera">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.PeperonataTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Giardiniera">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.PetitPoisTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Giardiniera">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.SlicedTomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Giardiniera">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Giardiniera">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.LeekTopping | pizza.MozzarellaTopping | pizza.MushroomTopping | pizza.OliveTopping | pizza.PeperonataTopping | pizza.PetitPoisTopping | pizza.SlicedTomatoTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.GoatsCheeseTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.CheeseTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.GoatsCheeseTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.GorgonzolaTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.CheeseTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.GorgonzolaTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.GreenPepperTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.PepperTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.HamTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.MeatTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.HerbSpiceTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.PizzaTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Hot">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.Spiciness"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.HotGreenPepperTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.GreenPepperTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.HotGreenPepperTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Hot)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.HotSpicedBeefTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.MeatTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.HotSpicedBeefTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Hot)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.IceCream">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.Food"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.IceCream">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.FruitTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.JalapenoPepperTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.PepperTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.JalapenoPepperTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Hot)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.LaReine">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.LaReine">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.HamTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.LaReine">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.LaReine">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MushroomTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.LaReine">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.OliveTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.LaReine">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.LaReine">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.HamTopping | pizza.MozzarellaTopping | pizza.MushroomTopping | pizza.OliveTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.LeekTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.VegetableTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.LeekTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Margherita">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Margherita">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Margherita">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Margherita">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.MozzarellaTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.MeatTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.PizzaTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Medium">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.Spiciness"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Mild">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.Spiciness"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.MixedSeafoodTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.FishTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.MozzarellaTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.CheeseTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.MozzarellaTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.MozzarellaTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasCountryOfOrigin.value(pizza.Italy)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Mushroom">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Mushroom">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Mushroom">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MushroomTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Mushroom">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Mushroom">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.MozzarellaTopping | pizza.MushroomTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.MushroomTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.VegetableTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.MushroomTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.NamedPizza">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.Pizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Napoletana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Napoletana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.AnchoviesTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Napoletana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.CaperTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Napoletana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Napoletana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.OliveTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Napoletana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Napoletana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.AnchoviesTopping | pizza.CaperTopping | pizza.MozzarellaTopping | pizza.OliveTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Napoletana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasCountryOfOrigin.value(pizza.Italy)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.NutTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.PizzaTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.NutTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.OliveTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.VegetableTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.OliveTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.OnionTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.VegetableTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.OnionTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Medium)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.ParmaHamTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.HamTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.ParmaHamTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Parmense">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Parmense">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.AsparagusTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Parmense">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.HamTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Parmense">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Parmense">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.ParmesanTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Parmense">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Parmense">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.AsparagusTopping | pizza.HamTopping | pizza.MozzarellaTopping | pizza.ParmesanTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.ParmesanTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.CheeseTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.ParmesanTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PeperonataTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.PepperTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PeperonataTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Medium)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PeperoniSausageTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.MeatTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PeperoniSausageTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Medium)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PepperTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.VegetableTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PetitPoisTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.VegetableTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PetitPoisTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PineKernels">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NutTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Pizza">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.Food"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Pizza">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasBase.some(pizza.PizzaBase)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PizzaBase">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.Food"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PizzaTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.Food"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PolloAdAstra">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PolloAdAstra">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.CajunSpiceTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PolloAdAstra">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.ChickenTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PolloAdAstra">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.GarlicTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PolloAdAstra">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PolloAdAstra">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.RedOnionTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PolloAdAstra">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.SweetPepperTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PolloAdAstra">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PolloAdAstra">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.CajunSpiceTopping | pizza.ChickenTopping | pizza.GarlicTopping | pizza.MozzarellaTopping | pizza.RedOnionTopping | pizza.SweetPepperTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PrawnsTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.FishTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PrinceCarlo">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PrinceCarlo">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.LeekTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PrinceCarlo">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PrinceCarlo">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.ParmesanTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PrinceCarlo">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.RosemaryTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PrinceCarlo">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.PrinceCarlo">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.LeekTopping | pizza.MozzarellaTopping | pizza.ParmesanTopping | pizza.RosemaryTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.QuattroFormaggi">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.QuattroFormaggi">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.FourCheesesTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.QuattroFormaggi">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.QuattroFormaggi">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.FourCheesesTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.RealItalianPizza">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasBase.only(pizza.ThinAndCrispyBase)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.RedOnionTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.OnionTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.RocketTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.VegetableTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.RocketTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Medium)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Rosa">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Rosa">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.GorgonzolaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Rosa">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Rosa">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Rosa">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.GorgonzolaTopping | pizza.MozzarellaTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.RosemaryTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.HerbSpiceTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.RosemaryTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.SauceTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.PizzaTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Siciliana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Siciliana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.AnchoviesTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Siciliana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.ArtichokeTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Siciliana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.GarlicTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Siciliana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.HamTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Siciliana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Siciliana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.OliveTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Siciliana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Siciliana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.AnchoviesTopping | pizza.ArtichokeTopping | pizza.GarlicTopping | pizza.HamTopping | pizza.MozzarellaTopping | pizza.OliveTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.SlicedTomatoTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.TomatoTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.SlicedTomatoTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.SloppyGiuseppe">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.SloppyGiuseppe">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.GreenPepperTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.SloppyGiuseppe">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.HotSpicedBeefTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.SloppyGiuseppe">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.SloppyGiuseppe">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.OnionTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.SloppyGiuseppe">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.SloppyGiuseppe">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.GreenPepperTopping | pizza.HotSpicedBeefTopping | pizza.MozzarellaTopping | pizza.OnionTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Soho">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Soho">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.GarlicTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Soho">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Soho">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.OliveTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Soho">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.ParmesanTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Soho">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.RocketTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Soho">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Soho">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.GarlicTopping | pizza.MozzarellaTopping | pizza.OliveTopping | pizza.ParmesanTopping | pizza.RocketTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Spiciness">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.ValuePartition"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.SpinachTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.VegetableTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.SpinachTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.SultanaTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.FruitTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.SultanaTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Medium)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.SundriedTomatoTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.TomatoTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.SundriedTomatoTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.SweetPepperTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.PepperTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.SweetPepperTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.ThinAndCrispyBase">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.PizzaBase"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.TobascoPepperSauce">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.SauceTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.TobascoPepperSauce">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Hot)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.TomatoTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.VegetableTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.TomatoTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasSpiciness.some(pizza.Mild)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.UnclosedPizza">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.Pizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.UnclosedPizza">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.VegetableTopping">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.PizzaTopping"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Veneziana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.NamedPizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Veneziana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.CaperTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Veneziana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.MozzarellaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Veneziana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.OliveTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Veneziana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.OnionTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Veneziana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.PineKernels)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Veneziana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.SultanaTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Veneziana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.some(pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Veneziana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasTopping.only(pizza.CaperTopping | pizza.MozzarellaTopping | pizza.OliveTopping | pizza.OnionTopping | pizza.PineKernels | pizza.SultanaTopping | pizza.TomatoTopping)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Veneziana">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza.hasCountryOfOrigin.value(pizza.Italy)"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.America">
+    <ex:individualOf>
+         <rdf:Description rdf:about="pizza.Country"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.England">
+    <ex:individualOf>
+         <rdf:Description rdf:about="pizza.Country"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.France">
+    <ex:individualOf>
+         <rdf:Description rdf:about="pizza.Country"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Germany">
+    <ex:individualOf>
+         <rdf:Description rdf:about="pizza.Country"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Italy">
+    <ex:individualOf>
+         <rdf:Description rdf:about="pizza.Country"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Pizza">
+    <ex:pizza.hasBase>
+         <rdf:Description rdf:about="pizza.PizzaBase"/>
+    </ex:pizza.hasBase>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Food">
+    <ex:pizza.hasIngredient>
+         <rdf:Description rdf:about="pizza.Food"/>
+    </ex:pizza.hasIngredient>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza.Pizza">
+    <ex:pizza.hasTopping>
+         <rdf:Description rdf:about="pizza.PizzaTopping"/>
+    </ex:pizza.hasTopping>
+</rdf:Description>
+

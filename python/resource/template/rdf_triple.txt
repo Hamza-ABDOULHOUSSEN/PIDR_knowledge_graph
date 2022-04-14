@@ -1,0 +1,6 @@
+<rdf:Description rdf:about="${subject}">
+    <ex:${predicate}>
+         <rdf:Description rdf:about="${object}"/>
+    </ex:${predicate}>
+</rdf:Description>
+

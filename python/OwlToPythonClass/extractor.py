@@ -1,11 +1,14 @@
 from owlready2 import *
+import string
 from OwlToPythonClass.owl_object import *
 
-ONTOLOGY = "file://resource/Geography.owl"
+
+ONTOLOGY = "file://resource/pizza.owl"
+ONTOLOGY_NAME = "pizza"
 PRINT_INFO = 1         # 0 for no and 1 for yes
+CREATE_OUTPUT = 1         # 0 for no and 1 for yes
 
 def get_all_classes():
-
     onto_classes = list(default_world.classes())
     classes = []
     for iri in onto_classes:
@@ -14,7 +17,6 @@ def get_all_classes():
     return classes
 
 def get_all_individuals():
-
     onto_ind = list(default_world.individuals())
     individuals = []
     for iri in onto_ind:
@@ -63,7 +65,7 @@ def generate_triple_list_subclass():
     for (sub_iri, obj_iri) in subclasses_pairs:
         sub_iri = str(sub_iri)
         obj_iri = str(obj_iri)
-        liste_triple.append((sub_iri, "SUBCLASSOF", obj_iri))
+        liste_triple.append((sub_iri, "subClassOf", obj_iri))
 
     return liste_triple
 
@@ -82,7 +84,7 @@ def generate_triple_list_individuals():
     for (ind_iri, cla_iri) in subclasses_pairs:
         ind_iri = str(ind_iri)
         cla_iri = str(cla_iri)
-        liste_triple.append((ind_iri, "INDIVIDUALS OF", cla_iri))
+        liste_triple.append((ind_iri, "individualOf", cla_iri))
 
     return liste_triple
 
@@ -147,7 +149,7 @@ def main():
     
     '''
     
-    triple_list = generate_triple_list_subclass()
+    subclasses = generate_triple_list_subclass()
 
     individuals = generate_triple_list_individuals()
 
@@ -170,7 +172,7 @@ def main():
         print("====================================================================")
 
         # TRY TO PRINT TRIPLE_LIST FOR SUBCLASS
-        for t in triple_list:
+        for t in subclasses:
             print(t)
 
         print()
@@ -192,6 +194,27 @@ def main():
         for t in properties:
             print(t)
 
+    if CREATE_OUTPUT:
+        # create output (it should not exist)
+        output = open("output/output_" + ONTOLOGY_NAME, "w", encoding="utf-8")
+
+        rdf_triple_template_file = open("resource/template/rdf_triple.txt")
+        rdf_triple_template = string.Template(rdf_triple_template_file.read())
+
+        for t in subclasses:
+            output_string = rdf_triple_template.substitute(subject=t[0], predicate=t[1], object=t[2])
+            output.write(output_string)
+
+        for t in individuals:
+            output_string = rdf_triple_template.substitute(subject=t[0], predicate=t[1], object=t[2])
+            output.write(output_string)
+
+        for t in properties:
+            output_string = rdf_triple_template.substitute(subject=t[0], predicate=t[1], object=t[2])
+            output.write(output_string)
+
+        rdf_triple_template_file.close()
+        output.close()
 
 
 if __name__ == '__main__':
