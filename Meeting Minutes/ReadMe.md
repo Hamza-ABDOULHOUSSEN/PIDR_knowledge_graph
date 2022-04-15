@@ -13,3 +13,4 @@ This folder contains the meeting minutes of the project
 - [March 16th 2022](Markdown/2022_03_16.md)
 - [March 30th 2022](Markdown/2022_03_30.md)
 - [April 06th 2022](Markdown/2022_04_06.md)
+- [April 13th 2022](Markdown/2022_04_13.md)
