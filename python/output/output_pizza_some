@@ -4,6 +4,12 @@
     </ex:subClassOf>
 </rdf:Description>
 
+<rdf:Description rdf:about="pizza_some.meetPizza">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="pizza_some.pizza"/>
+    </ex:subClassOf>
+</rdf:Description>
+
 <rdf:Description rdf:about="pizza_some.sea_food">
     <ex:subClassOf>
          <rdf:Description rdf:about="pizza_some.toppings"/>
@@ -19,6 +25,12 @@
 <rdf:Description rdf:about="pizza_some.BBQ_Chicken_Pizza">
     <ex:individualOf>
          <rdf:Description rdf:about="pizza_some.pizza"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza_some.BBQ_Chicken_Pizza">
+    <ex:individualOf>
+         <rdf:Description rdf:about="pizza_some.meetPizza"/>
     </ex:individualOf>
 </rdf:Description>
 
@@ -62,5 +74,11 @@
     <ex:pizza_some.hasToppings>
          <rdf:Description rdf:about="pizza_some.toppings"/>
     </ex:pizza_some.hasToppings>
+</rdf:Description>
+
+<rdf:Description rdf:about="pizza_some.meetPizza">
+    <ex:equivalentClass>
+         <rdf:Description rdf:about="pizza_some.hasToppings.some(pizza_some.meet)"/>
+    </ex:equivalentClass>
 </rdf:Description>
 

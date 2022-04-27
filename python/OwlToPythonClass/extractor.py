@@ -2,9 +2,9 @@ from owlready2 import *
 import string
 from owl_object import *
 
-
-ONTOLOGY = "file://resource/Chess_Ontology.owl"
-ONTOLOGY_NAME = "pizza"
+ONTOLOGY_NAME = "pizza_some"
+ONTOLOGY = f"file://resource/{ONTOLOGY_NAME}.owl"
+ONTOLOGY_AFTER_REASONER = f"file://resource/reasoner/{ONTOLOGY_NAME}.owl"
 PRINT_INFO = 1         # 0 for no and 1 for yes
 CREATE_OUTPUT = 1         # 0 for no and 1 for yes
 
@@ -52,6 +52,14 @@ def generate_all_subclass_properties(graph):
         sub_classe = classes[sub_iri]
         obj_classe = classes[obj_iri]
         obj_classe.add_subclass(sub_classe)
+
+## TRIPLE PART
+
+def reasoner():
+    onto=get_ontology(ONTOLOGY).load()
+    with onto:
+        sync_reasoner()
+        onto.save(file=f"./resource/reasoner/{ONTOLOGY_NAME}.owl")
 
 def generate_triple_list_subclass():
     liste_triple = []
@@ -130,10 +138,32 @@ def generate_triple_list_object_properties():
 
     return liste_triple
 
+def generate_triple_list_equivalent():
+    liste_triple = []
+
+    # this request generate all pairs of iri (cla1, cla2) where cla1 is equivalent to cla2
+    equivalent_list = list(default_world.sparql("""
+                           SELECT ?cla1 ?cla2
+            	                WHERE { ?cla1 owl:equivalentClass ?cla2 }
+                    """))
+
+    for (cla1, cla2) in equivalent_list:
+        cla1 = str(cla1)
+        cla2 = str(cla2)
+        liste_triple.append((cla1, 'equivalentClass', cla2))
+
+    return liste_triple
+
 def main():
 
+    # launch the reasoner
+    reasoner()
+
+    # remove the previous ontology
+    get_ontology(ONTOLOGY).destroy()
+
     # load the ontology
-    get_ontology(ONTOLOGY).load()
+    get_ontology(ONTOLOGY_AFTER_REASONER).load()
 
     '''
 
@@ -154,6 +184,8 @@ def main():
     individuals = generate_triple_list_individuals()
 
     properties = generate_triple_list_object_properties()
+
+    equivalent = generate_triple_list_equivalent()
 
     if PRINT_INFO:
         # TRY TO PRINT ALL GRAPH INFO
@@ -194,6 +226,15 @@ def main():
         for t in properties:
             print(t)
 
+        print()
+        print("====================================================================")
+        print("===================  EQUIVALENT CLASS ===================")
+        print("====================================================================")
+
+        # TRY TO PRINT TRIPLE_LIST FOR PROPERTIES
+        for t in equivalent:
+            print(t)
+
     if CREATE_OUTPUT:
         # create output (it should not exist)
         output = open("output/output_" + ONTOLOGY_NAME, "w", encoding="utf-8")
@@ -213,9 +254,12 @@ def main():
             output_string = rdf_triple_template.substitute(subject=t[0], predicate=t[1], object=t[2])
             output.write(output_string)
 
+        for t in equivalent:
+            output_string = rdf_triple_template.substitute(subject=t[0], predicate=t[1], object=t[2])
+            output.write(output_string)
+
         rdf_triple_template_file.close()
         output.close()
-
 
 if __name__ == '__main__':
     main()
