@@ -3,8 +3,8 @@ import string
 from OwlToPythonClass.owl_object import *
 
 
-ONTOLOGY = "file://resource/pizza.owl"
-ONTOLOGY_NAME = "pizza"
+ONTOLOGY = "file://resource/pizza_some.owl"
+ONTOLOGY_NAME = "pizza_some"
 PRINT_INFO = 1         # 0 for no and 1 for yes
 CREATE_OUTPUT = 1         # 0 for no and 1 for yes
 
@@ -130,6 +130,20 @@ def generate_triple_list_object_properties():
 
     return liste_triple
 
+def generate_triple_list_equivalent():
+    liste_triple = []
+
+    # this request generate all pairs of iri (prop, dom) where dom is the domain of the property prop
+    equivalent_list = list(default_world.sparql("""
+                           SELECT ?prop ?cla
+            	                WHERE { ?prop owl:equivalentClass ?cla }
+                    """))
+
+    for elem in equivalent_list:
+        liste_triple.append([elem[0], 'equivalentClass', elem[1]])
+
+    return liste_triple
+
 def main():
 
     # load the ontology
@@ -154,6 +168,8 @@ def main():
     individuals = generate_triple_list_individuals()
 
     properties = generate_triple_list_object_properties()
+
+    equivalent = generate_triple_list_equivalent()
 
     if PRINT_INFO:
         # TRY TO PRINT ALL GRAPH INFO
@@ -194,6 +210,15 @@ def main():
         for t in properties:
             print(t)
 
+        print()
+        print("====================================================================")
+        print("===================  EQUIVALENT CLASS ===================")
+        print("====================================================================")
+
+        # TRY TO PRINT TRIPLE_LIST FOR PROPERTIES
+        for t in equivalent:
+            print(t)
+
     if CREATE_OUTPUT:
         # create output (it should not exist)
         output = open("output/output_" + ONTOLOGY_NAME, "w", encoding="utf-8")
@@ -213,9 +238,12 @@ def main():
             output_string = rdf_triple_template.substitute(subject=t[0], predicate=t[1], object=t[2])
             output.write(output_string)
 
+        for t in equivalent:
+            output_string = rdf_triple_template.substitute(subject=t[0], predicate=t[1], object=t[2])
+            output.write(output_string)
+
         rdf_triple_template_file.close()
         output.close()
-
 
 if __name__ == '__main__':
     main()
