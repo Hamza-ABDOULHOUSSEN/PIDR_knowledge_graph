@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#"
+     xml:base="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Administrative_Division -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Administrative_Division"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Capital -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Capital">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#City"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Citade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Citade">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#City"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#City">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Administrative_Division"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Country"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#State -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#State">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Administrative_Division"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Beijing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Beijing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Capital"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Brasilia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Brasilia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Capital"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Brazil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Brazil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#China -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#China">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Curitiba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Curitiba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Fujian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Fujian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Harbin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Harbin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Moscow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Moscow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Capital"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Parana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Parana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#State"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Russia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Russia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Saint_Petersburg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#Saint_Petersburg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#City"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

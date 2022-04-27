@@ -1,11 +1,14 @@
 from owlready2 import *
+import string
 from OwlToPythonClass.owl_object import *
 
-ONTOLOGY = "file://resource/Chess_Ontology.owl"
-PRINT_INFO = 0         # 0 for no and 1 for yes
+
+ONTOLOGY = "file://resource/pizza.owl"
+ONTOLOGY_NAME = "pizza"
+PRINT_INFO = 1         # 0 for no and 1 for yes
+CREATE_OUTPUT = 1         # 0 for no and 1 for yes
 
 def get_all_classes():
-
     onto_classes = list(default_world.classes())
     classes = []
     for iri in onto_classes:
@@ -14,7 +17,6 @@ def get_all_classes():
     return classes
 
 def get_all_individuals():
-
     onto_ind = list(default_world.individuals())
     individuals = []
     for iri in onto_ind:
@@ -63,7 +65,26 @@ def generate_triple_list_subclass():
     for (sub_iri, obj_iri) in subclasses_pairs:
         sub_iri = str(sub_iri)
         obj_iri = str(obj_iri)
-        liste_triple.append((sub_iri, "SUBCLASSOF", obj_iri))
+        liste_triple.append((sub_iri, "subClassOf", obj_iri))
+
+    return liste_triple
+
+def generate_triple_list_individuals():
+    liste_triple = []
+
+    # this request generate all pairs of iri (ind, cla) where ind is an individual of the class cla
+    subclasses_pairs = list(default_world.sparql("""
+                   SELECT ?individual ?class
+    	                WHERE { 
+    	                ?individual rdf:type owl:NamedIndividual .
+                        ?class rdf:type owl:Class .
+    	                ?individual rdf:type ?class }
+            """))
+
+    for (ind_iri, cla_iri) in subclasses_pairs:
+        ind_iri = str(ind_iri)
+        cla_iri = str(cla_iri)
+        liste_triple.append((ind_iri, "individualOf", cla_iri))
 
     return liste_triple
 
@@ -114,6 +135,8 @@ def main():
     # load the ontology
     get_ontology(ONTOLOGY).load()
 
+    '''
+
     chess = graph(name="chess")
 
     generate_all_classes(chess)
@@ -124,20 +147,24 @@ def main():
     pieces_iri = "Chess_Ontology.Pieces"
     pieces_classe = chess.get_classes()[pieces_iri]
     
-    triple_list = generate_triple_list_subclass()
+    '''
+    
+    subclasses = generate_triple_list_subclass()
+
+    individuals = generate_triple_list_individuals()
 
     properties = generate_triple_list_object_properties()
 
     if PRINT_INFO:
         # TRY TO PRINT ALL GRAPH INFO
-        chess.print_all()
+        #chess.print_all()
 
         print()
         print("====================================================================")
         print("====================================================================")
 
         # TRY TO PRINT PIECES SUBCLASSES
-        pieces_classe.print_all()
+        #pieces_classe.print_all()
 
         print()
         print("====================================================================")
@@ -145,8 +172,18 @@ def main():
         print("====================================================================")
 
         # TRY TO PRINT TRIPLE_LIST FOR SUBCLASS
-        for t in triple_list:
+        for t in subclasses:
             print(t)
+
+        print()
+        print("====================================================================")
+        print("===================  INDIVIDUALS TRIPLES ===================")
+        print("====================================================================")
+
+        # TRY TO PRINT TRIPLE_LIST FOR INDIVIDUALS
+        for t in individuals:
+            print(t)
+
 
         print()
         print("====================================================================")
@@ -157,6 +194,27 @@ def main():
         for t in properties:
             print(t)
 
+    if CREATE_OUTPUT:
+        # create output (it should not exist)
+        output = open("output/output_" + ONTOLOGY_NAME, "w", encoding="utf-8")
+
+        rdf_triple_template_file = open("resource/template/rdf_triple.txt")
+        rdf_triple_template = string.Template(rdf_triple_template_file.read())
+
+        for t in subclasses:
+            output_string = rdf_triple_template.substitute(subject=t[0], predicate=t[1], object=t[2])
+            output.write(output_string)
+
+        for t in individuals:
+            output_string = rdf_triple_template.substitute(subject=t[0], predicate=t[1], object=t[2])
+            output.write(output_string)
+
+        for t in properties:
+            output_string = rdf_triple_template.substitute(subject=t[0], predicate=t[1], object=t[2])
+            output.write(output_string)
+
+        rdf_triple_template_file.close()
+        output.close()
 
 
 if __name__ == '__main__':

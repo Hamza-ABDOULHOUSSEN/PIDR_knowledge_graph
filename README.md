@@ -45,5 +45,7 @@ At each push, the tests are launched automatically and we can see the results in
 - [Neo4j create graph](https://neo4j.com/docs/graph-data-science/current/graph-create/)
 - [Neo4j build graph from ontologies](https://neo4j.com/developer/graph-data-science/build-knowledge-graph-nlp-ontologies/)
 - [Noe4j add ontologies](https://neo4j.com/labs/neosemantics/4.0/importing-ontologies/)
+- [Paper for constraint](https://alammehwish.github.io/dl4kg_eswc_2020/papers/paper3.pdf)
+- [RDF Triples](https://www.iro.umontreal.ca/~lapalme/ForestInsteadOfTheTrees/HTML/ch07s01.html)
   
   
