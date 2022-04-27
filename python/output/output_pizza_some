@@ -64,3 +64,9 @@
     </ex:pizza_some.hasToppings>
 </rdf:Description>
 
+<rdf:Description rdf:about="pizza_some.meetPizza">
+    <ex:equivalentClass>
+         <rdf:Description rdf:about="pizza_some.hasToppings.some(pizza_some.meet)"/>
+    </ex:equivalentClass>
+</rdf:Description>
+
