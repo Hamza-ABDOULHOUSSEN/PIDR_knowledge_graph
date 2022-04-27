@@ -70,13 +70,8 @@
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Is_check -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Is_check">
-<<<<<<< HEAD:Chess_Ontology_new_version.owl
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/untitled-ontology-2#Kings"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves"/>
-=======
         <rdfs:domain rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Kings"/>
->>>>>>> 76f9dc4cf770b28aa46ce3dd6e27ca904bd97127:python/resource/Chess_Ontology.owl
         <rdfs:comment>if King is check, the notation of the move have a &quot;+&quot; at the end</rdfs:comment>
     </owl:ObjectProperty>
     

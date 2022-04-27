@@ -1,9 +1,9 @@
 from owlready2 import *
 import string
-from OwlToPythonClass.owl_object import *
+from owl_object import *
 
 
-ONTOLOGY = "file://resource/pizza.owl"
+ONTOLOGY = "file://resource/Chess_Ontology.owl"
 ONTOLOGY_NAME = "pizza"
 PRINT_INFO = 1         # 0 for no and 1 for yes
 CREATE_OUTPUT = 1         # 0 for no and 1 for yes
