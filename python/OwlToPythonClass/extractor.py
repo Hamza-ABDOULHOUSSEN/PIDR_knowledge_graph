@@ -2,9 +2,9 @@ from owlready2 import *
 import string
 from OwlToPythonClass.owl_object import *
 
-
-ONTOLOGY = "file://resource/pizza_some.owl"
 ONTOLOGY_NAME = "pizza_some"
+ONTOLOGY = f"file://resource/{ONTOLOGY_NAME}.owl"
+ONTOLOGY_AFTER_REASONER = f"file://resource/reasoner/{ONTOLOGY_NAME}.owl"
 PRINT_INFO = 1         # 0 for no and 1 for yes
 CREATE_OUTPUT = 1         # 0 for no and 1 for yes
 
@@ -52,6 +52,14 @@ def generate_all_subclass_properties(graph):
         sub_classe = classes[sub_iri]
         obj_classe = classes[obj_iri]
         obj_classe.add_subclass(sub_classe)
+
+## TRIPLE PART
+
+def reasoner():
+    onto=get_ontology(ONTOLOGY).load()
+    with onto:
+        sync_reasoner()
+        onto.save(file=f"./resource/reasoner/{ONTOLOGY_NAME}.owl")
 
 def generate_triple_list_subclass():
     liste_triple = []
@@ -133,21 +141,29 @@ def generate_triple_list_object_properties():
 def generate_triple_list_equivalent():
     liste_triple = []
 
-    # this request generate all pairs of iri (prop, dom) where dom is the domain of the property prop
+    # this request generate all pairs of iri (cla1, cla2) where cla1 is equivalent to cla2
     equivalent_list = list(default_world.sparql("""
-                           SELECT ?prop ?cla
-            	                WHERE { ?prop owl:equivalentClass ?cla }
+                           SELECT ?cla1 ?cla2
+            	                WHERE { ?cla1 owl:equivalentClass ?cla2 }
                     """))
 
-    for elem in equivalent_list:
-        liste_triple.append([elem[0], 'equivalentClass', elem[1]])
+    for (cla1, cla2) in equivalent_list:
+        cla1 = str(cla1)
+        cla2 = str(cla2)
+        liste_triple.append((cla1, 'equivalentClass', cla2))
 
     return liste_triple
 
 def main():
 
+    # launch the reasoner
+    reasoner()
+
+    # remove the previous ontology
+    get_ontology(ONTOLOGY).destroy()
+
     # load the ontology
-    get_ontology(ONTOLOGY).load()
+    get_ontology(ONTOLOGY_AFTER_REASONER).load()
 
     '''
 
