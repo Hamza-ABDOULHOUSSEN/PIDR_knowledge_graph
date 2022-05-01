@@ -1,0 +1,217 @@
+from owlready2 import *
+import string
+
+ONTOLOGY_NAME = "pizza"
+ONTOLOGY = f"file://resource/{ONTOLOGY_NAME}.owl"
+ONTOLOGY_AFTER_REASONER = f"file://resource/reasoner/{ONTOLOGY_NAME}.owl"
+PRINT_INFO = 1         # 0 for no and 1 for yes
+CREATE_OUTPUT = 1         # 0 for no and 1 for yes
+
+def reasoner():
+    onto=get_ontology(ONTOLOGY).load()
+    with onto:
+        sync_reasoner()
+        onto.save(file=f"./resource/reasoner/{ONTOLOGY_NAME}.owl")
+
+def generate_triple_list_subclass():
+    liste_triple = []
+
+    # this request generate all pairs of iri (subject, object) where subject is a subclass of object
+    subclasses_pairs = list(default_world.sparql("""
+                   SELECT ?subject ?object
+    	                WHERE { ?subject rdfs:subClassOf ?object }
+            """))
+
+    for (sub_iri, obj_iri) in subclasses_pairs:
+        sub_iri = str(sub_iri)
+        obj_iri = str(obj_iri)
+        liste_triple.append((sub_iri, "subClassOf", obj_iri))
+
+    return liste_triple
+
+def generate_triple_list_individuals():
+    liste_triple = []
+
+    # this request generate all pairs of iri (ind, cla) where ind is an individual of the class cla
+    subclasses_pairs = list(default_world.sparql("""
+                   SELECT ?individual ?class
+    	                WHERE { 
+    	                ?individual rdf:type owl:NamedIndividual .
+                        ?class rdf:type owl:Class .
+    	                ?individual rdf:type ?class }
+            """))
+
+    for (ind_iri, cla_iri) in subclasses_pairs:
+        ind_iri = str(ind_iri)
+        cla_iri = str(cla_iri)
+        liste_triple.append((ind_iri, "individualOf", cla_iri))
+
+    return liste_triple
+
+def generate_triple_list_object_properties():
+    liste_triple = []
+
+    # this request generate all pairs of iri (prop, dom) where dom is the domain of the property prop
+    domain_list = list(default_world.sparql("""
+                       SELECT ?prop ?dom
+        	                WHERE { ?prop rdfs:domain ?dom }
+                """))
+
+    # this request generate all pairs of iri (prop, ran) where ran is the range of the property prop
+    range_list = list(default_world.sparql("""
+                       SELECT ?prop ?ran
+        	                WHERE { ?prop rdfs:range ?ran }
+                """))
+
+    # creation of the dictionary
+    domain_dic = {}
+    range_dic = {}
+
+    for (prop_iri, obj_iri) in domain_list:
+        prop_iri = str(prop_iri)
+        obj_iri = str(obj_iri)
+        if prop_iri in domain_dic.keys():
+            domain_dic[prop_iri].append(obj_iri)
+        else:
+            domain_dic[prop_iri] = [obj_iri]
+
+    for (prop_iri, obj_iri) in range_list:
+        prop_iri = str(prop_iri)
+        obj_iri = str(obj_iri)
+        if prop_iri in range_dic.keys():
+            range_dic[prop_iri].append(obj_iri)
+        else:
+            range_dic[prop_iri] = [obj_iri]
+
+    for prop in domain_dic.keys():
+        for dom in domain_dic[prop]:
+            for ran in range_dic[prop]:
+                liste_triple.append((dom, prop, ran))
+
+    return liste_triple
+
+def generate_triple_list_equivalent():
+    liste_triple = []
+
+    # this request generate all pairs of iri (cla1, cla2) where cla1 is equivalent to cla2
+    equivalent_list = list(default_world.sparql("""
+                           SELECT ?cla1 ?cla2
+            	                WHERE { ?cla1 owl:equivalentClass ?cla2 }
+                    """))
+
+    for (cla1, cla2) in equivalent_list:
+        cla1 = str(cla1)
+        cla2 = str(cla2)
+        liste_triple.append((cla1, 'equivalentClass', cla2))
+
+    return liste_triple
+
+def main():
+
+    # launch the reasoner
+    reasoner()
+
+    # remove the previous ontology
+    get_ontology(ONTOLOGY).destroy()
+
+    # load the ontology
+    get_ontology(ONTOLOGY_AFTER_REASONER).load()
+
+    '''
+
+    chess = graph(name="chess")
+
+    generate_all_classes(chess)
+    generate_all_individuals(chess)
+    generate_all_subclass_properties(chess)
+
+    # TRY TO PRINT PIECES SUBCLASSES
+    pieces_iri = "Chess_Ontology.Pieces"
+    pieces_classe = chess.get_classes()[pieces_iri]
+    
+    '''
+    
+    subclasses = generate_triple_list_subclass()
+
+    individuals = generate_triple_list_individuals()
+
+    properties = generate_triple_list_object_properties()
+
+    equivalent = generate_triple_list_equivalent()
+
+    if PRINT_INFO:
+        # TRY TO PRINT ALL GRAPH INFO
+        #chess.print_all()
+
+        print()
+        print("====================================================================")
+        print("====================================================================")
+
+        # TRY TO PRINT PIECES SUBCLASSES
+        #pieces_classe.print_all()
+
+        print()
+        print("====================================================================")
+        print("===================  SUBCLASS TRIPLES ===================")
+        print("====================================================================")
+
+        # TRY TO PRINT TRIPLE_LIST FOR SUBCLASS
+        for t in subclasses:
+            print(t)
+
+        print()
+        print("====================================================================")
+        print("===================  INDIVIDUALS TRIPLES ===================")
+        print("====================================================================")
+
+        # TRY TO PRINT TRIPLE_LIST FOR INDIVIDUALS
+        for t in individuals:
+            print(t)
+
+
+        print()
+        print("====================================================================")
+        print("===================  PROPERTIES TRIPLES ===================")
+        print("====================================================================")
+
+        # TRY TO PRINT TRIPLE_LIST FOR PROPERTIES
+        for t in properties:
+            print(t)
+
+        print()
+        print("====================================================================")
+        print("===================  EQUIVALENT CLASS ===================")
+        print("====================================================================")
+
+        # TRY TO PRINT TRIPLE_LIST FOR PROPERTIES
+        for t in equivalent:
+            print(t)
+
+    if CREATE_OUTPUT:
+        # create output (it should not exist)
+        output = open("output/output_" + ONTOLOGY_NAME, "w", encoding="utf-8")
+
+        rdf_triple_template_file = open("resource/template/rdf_triple.txt")
+        rdf_triple_template = string.Template(rdf_triple_template_file.read())
+
+        for t in subclasses:
+            output_string = rdf_triple_template.substitute(subject=t[0], predicate=t[1], object=t[2])
+            output.write(output_string)
+
+        for t in individuals:
+            output_string = rdf_triple_template.substitute(subject=t[0], predicate=t[1], object=t[2])
+            output.write(output_string)
+
+        for t in properties:
+            output_string = rdf_triple_template.substitute(subject=t[0], predicate=t[1], object=t[2])
+            output.write(output_string)
+
+        for t in equivalent:
+            output_string = rdf_triple_template.substitute(subject=t[0], predicate=t[1], object=t[2])
+            output.write(output_string)
+
+        rdf_triple_template_file.close()
+        output.close()
+
+if __name__ == '__main__':
+    main()

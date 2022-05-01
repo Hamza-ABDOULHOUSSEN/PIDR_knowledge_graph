@@ -1,0 +1,46 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class graph {
+name str
+classes Dict[str, classe]
+individuals Dict[str, individual]
+--
+get_name()
+get_classes()
+get_individuals()
+__
+add_classe(classe)
+add_individual(individual)
+print_all()
+}
+
+class classe {
+iri str
+name str
+subclasses Dict[str, classe]
+individuals Dict[str, individual]
+--
+get_iri()
+get_name()
+get_subclasses()
+get_individuals()
+__
+add_subclass(classe)
+add_individual(individual)
+print_all()
+}
+
+class individual {
+iri str
+name str
+parent_class classe
+--
+get_iri()
+get_name()
+get_parent_classe()
+__
+print_all()
+}
+
+@enduml
