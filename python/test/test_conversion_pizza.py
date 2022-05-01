@@ -1,5 +1,5 @@
 import pytest
-from OwlToPythonClass.extractor import *
+from OwlToRdf.conversion_owl_to_rdf import *
 import os
 
 ONTOLOGY = "file://resource/pizza.owl"
