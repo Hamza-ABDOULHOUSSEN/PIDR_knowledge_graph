@@ -3,7 +3,7 @@ from spacy.lang.en import English
 import networkx as nx
 import matplotlib.pyplot as plt
 
-from OwlToPythonClass.extractor import *
+from OwlToRdf.conversion_owl_to_rdf import *
 
 ONTOLOGY = "file://resource/pizza_some.owl"
 ONTOLOGY_NAME = "pizza_some"
