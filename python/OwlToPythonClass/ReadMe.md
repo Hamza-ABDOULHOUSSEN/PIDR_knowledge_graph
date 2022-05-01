@@ -1,20 +1,14 @@
-# OwlToPythonClass
+# 1. OwlToPythonClass
 
-<style>
-r { color: Red }
-o { color: Orange }
-g { color: Green }
-</style>
-
-- [OwlToPythonClass](#owltopythonclass)
-  - [Python object](#python-object)
-  - [Example](#example)
-  - [extractor](#extractor)
+- [1. OwlToPythonClass](#1-owltopythonclass)
+  - [1.1. Python object](#11-python-object)
+  - [1.2. Example](#12-example)
+  - [1.3. extractor](#13-extractor)
 
 
 This package read ontologies and create python object to use them
 
-## Python object
+## 1.1. Python object
 Those are the objects  
 
 - graph  
@@ -28,7 +22,7 @@ contains the name, iri and parent class of the individual
 
 ![image](owl_object_diagram/owl_object.png)
 
-## Example
+## 1.2. Example
 the print_all methods show the information of an object  
 
 Here is an example of what we got with the chess ontology
@@ -72,5 +66,5 @@ iri : Chess_Ontology.R1
 parent_class : Rooks
 ```
 
-## extractor
+## 1.3. extractor
 This `python` file convert an ontology into the previous python objects
