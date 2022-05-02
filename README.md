@@ -26,7 +26,8 @@ This folder contains all the meeting minutes
 This folder contains the python script to add match in the ontology
 
 ### 1.2.3. [python](python)
-This folder contains the main python code, with the packages, the requirements and a test package which are lauched with pytest and automatically when we push on github.
+This folder contains the main python code, with the packages, the requirements and a test package which are lauched with pytest and automatically when we push on github.  
+[Detail](python/ReadMe.md)
 
 ### 1.2.4. Chess Ontology.owl
 This is the ontology test created about chess knowledge

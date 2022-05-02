@@ -1,11 +1,27 @@
 from rdflib import Graph
-from rdflib.plugin import register, Serializer, Parser
+import io
+import pydotplus
+from IPython.display import display, Image
+from rdflib.tools.rdf2dot import rdf2dot
+
+path = "owl_object_diagram/owl_object.png"
+
+def visualize(g):
+    stream = io.StringIO()
+    rdf2dot(g, stream, opts = {display})
+    dg = pydotplus.graph_from_dot_data(stream.getvalue())
+    png = dg.create_png()
+    display(Image(png))
+
+def vis():
+    display(Image(path))
+
 g = Graph()
-g.parse("https://raw.githubusercontent.com/Hamza-ABDOULHOUSSEN/PIDR_knowledge_graph/main/Chess_Ontology.owl?token=GHSAT0AAAAAABTBJMC4GG4VYLTUEXLH6QQCYSEPTPQ")
+
+result = g.parse("./../output/output_pizza_some.xml")
 v = g.serialize(format="xml")
 
-# g = Graph()
-#
-# g.parse("https://raw.githubusercontent.com/Hamza-ABDOULHOUSSEN/PIDR_knowledge_graph/main/Chess_Ontology.owl?token=GHSAT0AAAAAABTBJMC4GG4VYLTUEXLH6QQCYSEPTPQ")
-# v = g.serialize(format="xml")
-# print(len(g))
+path = "image.png"
+
+#visualize(g)
+vis()

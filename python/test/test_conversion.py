@@ -1,5 +1,5 @@
 import pytest
-from OwlToPythonClass.extractor import *
+from OwlToRdf.conversion_owl_to_rdf import *
 import os
 
 ONTOLOGY = "file://resource/Chess_Ontology.owl"
@@ -19,17 +19,11 @@ for ONTO in ALL_ONTOLOGIES:
 
 get_ontology(ONTOLOGY).load()
 
-chess = graph(name="chess")
-
-generate_all_classes(chess)
-generate_all_individuals(chess)
-generate_all_subclass_properties(chess)
-
 triple_list = generate_triple_list_subclass()
 properties = generate_triple_list_object_properties()
 
 def test_extractor_subclass():
-    assert len(triple_list) == 26
+    assert len(triple_list) == 28
 
     # get the list of pieces subclass
     sub_list = []
