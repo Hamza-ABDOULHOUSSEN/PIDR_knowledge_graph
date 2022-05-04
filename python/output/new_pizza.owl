@@ -1,0 +1,3 @@
+<owl:Class rdf:about="#meetPizza">
+  <rdfs:subClassOf rdf:resource="#pizza"/>
+</owl:Class>
