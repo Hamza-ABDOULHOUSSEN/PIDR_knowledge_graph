@@ -15,18 +15,33 @@ list_of_predicate_reading=["individualOf","subClassOf","equivalentClass"]
 
 def buildClasses(subject,object):
     new_ont = open("./output/new_pizza.owl", "w+", encoding="utf-8")
-    buildfirst="<owl:Class rdf:about=\"#"+subject+"\">"
+    lines=new_ont.readlines()
+    alreay_exist=False
+    for line in lines:
+        if line.startswith("<owl:Class rdf:about=\"#"+subject+"\">"):
+            new_ont.write("\n")
+            new_ont.write("  <rdfs:subClassOf rdf:resource=\"#"+object+"\"/>\n") #check a mon avis n'ecrit pas au bon endroit !
+            alreay_exist=True
+    if not (alreay_exist):
+        buildfirst="<owl:Class rdf:about=\"#"+subject+"\">"
+        new_ont.write(buildfirst)
+        new_ont.write("\n")
+        subclass="  <rdfs:subClassOf rdf:resource=\"#"+object+"\"/>"
+        new_ont.write(subclass)
+        new_ont.write("\n")
+        new_ont.write("</owl:Class>")
+        new_ont.write("\n")
+
+
+
+def buildIndivuals(subject,object):
+    #print("ohhhh")
+    new_ont = open("./output/new_pizza.owl", "w+", encoding="utf-8")
+    buildfirst="<"+object +"rdf:about=\"#"+subject+" \">"+"\n"
     new_ont.write(buildfirst)
-    new_ont.write("\n")
-    subclass="  <rdfs:subClassOf rdf:resource=\"#"+object+"\"/>"
-    new_ont.write(subclass)
-    new_ont.write("\n")
-    new_ont.write("</owl:Class>")
-    new_ont.write("\n")
-
-
-# def buildIndivuals():
-#
+    type="  <rdf:type rdf:resource=\"http://www.w3.org/2002/07/owl#NamedIndividual\"/>\n"
+    new_ont.write(type)
+    new_ont.write("</"+object+">")
 # def buildObjectProperties():
 #
 # def buildAnnotationProperties():
@@ -44,9 +59,11 @@ def main():
     new_ont = open("./output/new_pizza.owl", "w+", encoding="utf-8")
     triples=gettriples()
     for triple in triples:
-        print(triple)
+        #print(triple)
         if(triple[0]=="subClassOf"):
             buildClasses(triple[1],triple[2])
+        if(triple[0]=="individualOf"):
+            buildIndivuals(triple[1],triple[2])
 
 
 
