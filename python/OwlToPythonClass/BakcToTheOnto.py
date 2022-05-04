@@ -1,12 +1,7 @@
 from owlready2 import *
 import string
 from OwlToPythonClass.owl_object import *
-
-
-ONTOLOGY = "file://resource/pizza.owl"
-ONTOLOGY_NAME = "pizza"
-PRINT_INFO = 1         # 0 for no and 1 for yes
-CREATE_OUTPUT = 1         # 0 for no and 1 for yes
+import re
 
 
 list_of_predicate_reading=["individualOf","subClassOf","equivalentClass"]
@@ -96,7 +91,45 @@ def gettriples():
             call = 0
     return triples
 
+def gettriples2():
+    INPUT_FILE = "output/output_pizza_some.xml"
+    file = open(INPUT_FILE, "r", encoding="utf-8")
+    lines = file.readlines()
+    k = 0
+    n = len(lines)
 
+    triple_list = []
+
+    pattern_subject = r'<rdf:Description rdf:about="(?P<subject>.*)">'
+    pattern_predicate = r'    <ex:(?P<predicate>.*)>'
+    pattern_object = r'         <rdf:Description rdf:about="(?P<object>.*)"/>'
+
+    while k < n:
+        line = lines[k]
+
+        if line.startswith("<rdf:Description "):
+            value = line
+            m = re.match(pattern_subject, value)
+            subject = m.group("subject")
+            k += 1
+            line = lines[k]
+            value = line
+            m = re.match(pattern_predicate, value)
+            predicate = m.group("predicate")
+            k += 1
+            line = lines[k]
+            value = line
+            m = re.match(pattern_object, value)
+            object = m.group("object")
+
+            triple_list.append((subject, predicate, object))
+
+
+        k = k+1
+
+    file.close()
+
+    print(len(triple_list))
 
 
 
