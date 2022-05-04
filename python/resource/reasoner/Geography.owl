@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography"
+         xmlns="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/2/Geography"/>
+
+<owl:Class rdf:about="#Administrative_Division"/>
+
+<owl:Class rdf:about="#Capital">
+  <rdfs:subClassOf rdf:resource="#City"/>
+  <rdfs:subClassOf rdf:resource="#Citade"/>
+</owl:Class>
+
+<owl:Class rdf:about="#City">
+  <rdfs:subClassOf rdf:resource="#Administrative_Division"/>
+  <owl:equivalentClass rdf:resource="#Citade"/>
+  <owl:disjointWith rdf:resource="#State"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Citade">
+  <owl:equivalentClass rdf:resource="#City"/>
+</owl:Class>
+
+<owl:Class rdf:about="#State">
+  <rdfs:subClassOf rdf:resource="#Administrative_Division"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Country"/>
+
+<Capital rdf:about="#Beijing">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Capital>
+
+<Capital rdf:about="#Brasilia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Capital>
+
+<Country rdf:about="#Brazil">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Country>
+
+<Country rdf:about="#China">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Country>
+
+<City rdf:about="#Curitiba">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Citade"/>
+</City>
+
+<State rdf:about="#Fujian">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</State>
+
+<City rdf:about="#Harbin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Citade"/>
+</City>
+
+<Capital rdf:about="#Moscow">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Capital>
+
+<State rdf:about="#Parana">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</State>
+
+<Country rdf:about="#Russia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Country>
+
+<City rdf:about="#Saint_Petersburg">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Citade"/>
+</City>
+
+
+</rdf:RDF>

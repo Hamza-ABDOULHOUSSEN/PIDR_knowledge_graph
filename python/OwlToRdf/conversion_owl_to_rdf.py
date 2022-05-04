@@ -153,6 +153,10 @@ def create_output(OUTPUT_FILE, subclasses, individuals, properties, equivalent):
     # create output (it should not exist)
     output = open(OUTPUT_FILE, "w", encoding="utf-8")
 
+    # HEADER
+    with open("resource/template/header.txt", "r") as header:
+        output.write(header.read())
+
     rdf_triple_template_file = open("resource/template/rdf_triple.txt")
     rdf_triple_template = string.Template(rdf_triple_template_file.read())
 
@@ -173,17 +177,22 @@ def create_output(OUTPUT_FILE, subclasses, individuals, properties, equivalent):
         output.write(output_string)
 
     rdf_triple_template_file.close()
+
+    # FOOTER
+    with open("resource/template/footer.txt") as footer:
+        output.write(footer.read())
+
     output.close()
 
 def main():
     
-    ONTOLOGY_NAME = "pizza"
-    DEFAULT = 1     # 1 to use the script as it should be in default
+    ONTOLOGY_NAME = "Geography"
+    DEFAULT = 0     # 1 to use the script as it should be in default
 
     PRINT_INFO = 0  # 0 for no and 1 for yes
     ONTOLOGY = f"resource/{ONTOLOGY_NAME}.owl"
     CREATE_OUTPUT = 1  # 0 for no and 1 for yes
-    OUTPUT_FILE = f"output/output_{ONTOLOGY_NAME}"
+    OUTPUT_FILE = f"output/output_{ONTOLOGY_NAME}.xml"
     REASONER = 1  # 0 for no and 1 for yes
     KEEP_REASONER_FILE = 1  # 0 for no and 1 for yes
     ONTOLOGY_AFTER_REASONER = f"resource/reasoner/{ONTOLOGY_NAME}.owl"
