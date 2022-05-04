@@ -1,6 +1,16 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ex="http://example.org/stuff/1.0/">
+
 <rdf:Description rdf:about="Geography.Capital">
     <ex:subClassOf>
          <rdf:Description rdf:about="Geography.City"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Geography.Capital">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Geography.Citade"/>
     </ex:subClassOf>
 </rdf:Description>
 
@@ -46,6 +56,12 @@
     </ex:individualOf>
 </rdf:Description>
 
+<rdf:Description rdf:about="Geography.Curitiba">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Geography.Citade"/>
+    </ex:individualOf>
+</rdf:Description>
+
 <rdf:Description rdf:about="Geography.Fujian">
     <ex:individualOf>
          <rdf:Description rdf:about="Geography.State"/>
@@ -55,6 +71,12 @@
 <rdf:Description rdf:about="Geography.Harbin">
     <ex:individualOf>
          <rdf:Description rdf:about="Geography.City"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Geography.Harbin">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Geography.Citade"/>
     </ex:individualOf>
 </rdf:Description>
 
@@ -82,3 +104,22 @@
     </ex:individualOf>
 </rdf:Description>
 
+<rdf:Description rdf:about="Geography.Saint_Petersburg">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Geography.Citade"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Geography.City">
+    <ex:equivalentClass>
+         <rdf:Description rdf:about="Geography.Citade"/>
+    </ex:equivalentClass>
+</rdf:Description>
+
+<rdf:Description rdf:about="Geography.Citade">
+    <ex:equivalentClass>
+         <rdf:Description rdf:about="Geography.City"/>
+    </ex:equivalentClass>
+</rdf:Description>
+
+</rdf:RDF>
