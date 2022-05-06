@@ -34,6 +34,8 @@ DESCRIPTION
      -p      To print the triple added
      
 
+     -s      To create standard triple without restrictions
+     
      -r      To add reasoner before
      
 

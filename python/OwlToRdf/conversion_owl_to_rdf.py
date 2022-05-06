@@ -250,6 +250,8 @@ def main():
             i = i + 1
             CREATE_OUTPUT = 1
             OUTPUT_FILE = sys.argv[i]
+        elif sys.argv[i] == "-s":
+            STANDART_OUTPUT = 1
         elif sys.argv[i] == "-r":
             REASONER = 1
             ONTOLOGY_AFTER_REASONER = ONTOLOGY[:-4] + "_reasoner_temp.owl"
