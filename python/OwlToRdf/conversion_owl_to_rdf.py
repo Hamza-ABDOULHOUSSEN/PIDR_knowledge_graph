@@ -102,6 +102,24 @@ def generate_triple_list_equivalent():
 
     return liste_triple
 
+def remove_restriction(triples):
+    list_of_restrictions = [' & ', ' | ', 'Not(', 'some(', 'only(', 'value(', 'min(', 'max(']
+
+    new_triples = []
+
+    for triple in triples:
+        add = True
+        for elem in triple:
+            for restr in list_of_restrictions:
+
+                if restr in elem:
+                    add = False
+
+        if add:
+            new_triples.append(triple)
+
+    return new_triples
+
 def print_info(subclasses, individuals, properties, equivalent):
     # TRY TO PRINT ALL GRAPH INFO
     # chess.print_all()
@@ -186,13 +204,14 @@ def create_output(OUTPUT_FILE, subclasses, individuals, properties, equivalent):
 
 def main():
     
-    ONTOLOGY_NAME = "Geography"
+    ONTOLOGY_NAME = "pizza"
     DEFAULT = 0     # 1 to use the script as it should be in default
 
     PRINT_INFO = 0  # 0 for no and 1 for yes
     ONTOLOGY = f"resource/{ONTOLOGY_NAME}.owl"
     CREATE_OUTPUT = 1  # 0 for no and 1 for yes
-    OUTPUT_FILE = f"output/output_{ONTOLOGY_NAME}.xml"
+    STANDART_OUTPUT = 1
+    OUTPUT_FILE = f"output/standard_{ONTOLOGY_NAME}.xml"
     REASONER = 1  # 0 for no and 1 for yes
     KEEP_REASONER_FILE = 1  # 0 for no and 1 for yes
     ONTOLOGY_AFTER_REASONER = f"resource/reasoner/{ONTOLOGY_NAME}.owl"
@@ -201,6 +220,7 @@ def main():
         PRINT_INFO = 0
         ONTOLOGY = ""
         CREATE_OUTPUT = 0
+        STANDART_OUTPUT = 0
         OUTPUT_FILE = ""
         REASONER = 0
         KEEP_REASONER_FILE = 0
@@ -270,6 +290,12 @@ def main():
     properties = generate_triple_list_object_properties()
 
     equivalent = generate_triple_list_equivalent()
+
+    if STANDART_OUTPUT:
+        subclasses = remove_restriction(subclasses)
+        individuals = remove_restriction(individuals)
+        properties = remove_restriction(properties)
+        equivalent = remove_restriction(equivalent)
 
     if PRINT_INFO:
         print_info(subclasses, individuals, properties, equivalent)
