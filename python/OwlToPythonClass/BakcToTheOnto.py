@@ -1,64 +1,124 @@
 from owlready2 import *
 import string
 from OwlToPythonClass.owl_object import *
-import re
 
 
-list_of_predicate_reading=["individualOf","subClassOf","equivalentClass"]
+#list_of_predicate_reading=["individualOf","subClassOf","equivalentClass"]
 
 #for the comparison at the end
 
-def buildClasses(subject,object):
-    new_ont = open("./output/new_pizza.owl", "w+", encoding="utf-8")
-    lines=new_ont.readlines()
-    alreay_exist=False
-    for line in lines:
-        if line.startswith("<owl:Class rdf:about=\"#"+subject+"\">"):
-            new_ont.write("\n")
-            new_ont.write("  <rdfs:subClassOf rdf:resource=\"#"+object+"\"/>\n") #check a mon avis n'ecrit pas au bon endroit !
-            alreay_exist=True
-    if not (alreay_exist):
-        buildfirst="<owl:Class rdf:about=\"#"+subject+"\">"
-        new_ont.write(buildfirst)
-        new_ont.write("\n")
-        subclass="  <rdfs:subClassOf rdf:resource=\"#"+object+"\"/>"
-        new_ont.write(subclass)
-        new_ont.write("\n")
-        new_ont.write("</owl:Class>")
-        new_ont.write("\n")
+# def buildClasses(subject,object):
+#     with open("./output/new_pizza.owl", "w+", encoding="utf-8") as new_ont:
+#
+#         lines=new_ont.readlines()
+#         alreay_exist=False
+#         for line in lines:
+#             if line.startswith("<owl:Class rdf:about=\"#"+subject+"\">"):
+#                 new_ont.write("\n")
+#                 new_ont.write("  <rdfs:subClassOf rdf:resource=\"#"+object+"\"/>\n") #check a mon avis n'ecrit pas au bon endroit !
+#                 alreay_exist=True
+#         if not (alreay_exist):
+#             buildfirst="<owl:Class rdf:about=\"#"+subject+"\">"
+#             new_ont.write(buildfirst)
+#             new_ont.write("\n")
+#             subclass="  <rdfs:subClassOf rdf:resource=\"#"+object+"\"/>"
+#             new_ont.write(subclass)
+#             new_ont.write("\n")
+#             new_ont.write("</owl:Class>")
+#             new_ont.write("\n")
 
 
 
-def buildIndivuals(subject,object):
-    #print("ohhhh")
-    new_ont = open("./output/new_pizza.owl", "w+", encoding="utf-8")
-    buildfirst="<"+object +"rdf:about=\"#"+subject+" \">"+"\n"
-    new_ont.write(buildfirst)
-    type="  <rdf:type rdf:resource=\"http://www.w3.org/2002/07/owl#NamedIndividual\"/>\n"
-    new_ont.write(type)
-    new_ont.write("</"+object+">")
+# def buildIndivuals(subject,object):
+#     with open("./output/new_pizza.owl", "w+", encoding="utf-8") as new_ont:
+#         buildfirst="<"+object +" rdf:about=\"#"+subject+" \">"+"\n"
+#         new_ont.write(buildfirst)
+#         type="  <rdf:type rdf:resource=\"http://www.w3.org/2002/07/owl#NamedIndividual\"/>\n"
+#         new_ont.write(type)
+#         new_ont.write("</"+object+">")
 # def buildObjectProperties():
 #
 # def buildAnnotationProperties():
 #
-# def buildAxioms():
 
 link="./output/output_pizza_some.xml"
 lenght_link= len(link.split("/"))
 name_file=link.split("/")[lenght_link-1]
+main_class="looooool"
 #express the name of the file that we have in all rdf:about
 
 file_name_reduce=name_file.split('.')[0].removeprefix('output_')
-
+file_path="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some"
 def main():
-    new_ont = open("./output/new_pizza.owl", "w+", encoding="utf-8")
-    triples=gettriples()
-    for triple in triples:
-        #print(triple)
-        if(triple[0]=="subClassOf"):
-            buildClasses(triple[1],triple[2])
-        if(triple[0]=="individualOf"):
-            buildIndivuals(triple[1],triple[2])
+    with open("./output/new_pizza.owl", "w+", encoding="utf-8") as new_ont:
+        #header
+        new_ont.write("<?xml version=\"1.0\"?>\n")
+        new_ont.write("<rdf:RDF xmlns=\"http://www.semanticweb.org/hamza/ontologies/2022/3/"+file_name_reduce+"#\"\n "
+                      "xml:base=\"http://www.semanticweb.org/hamza/ontologies/2022/3/"+file_name_reduce+"\" \n "
+                      "xmlns:owl=\"http://www.w3.org/2002/07/owl#\"\n "
+                      "xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n "
+                      "xmlns:xml=\"http://www.w3.org/XML/1998/namespace\"\n "
+                      "xmlns:xsd=\"http://www.w3.org/2001/XMLSchema#\"\n "
+                      "xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\"\n "
+                      "xmlns:"+file_name_reduce+"=\"http://www.semanticweb.org/hamza/ontologies/2022/3/"+file_name_reduce+"#\">\n "
+                      "<owl:Ontology rdf:about=\"http://www.semanticweb.org/hamza/ontologies/2022/3/"+file_name_reduce+""
+                      "\"/>\")\n\n\n")
+
+        triples=gettriples2()
+        for triple in triples:
+            print(triple)
+            object=triple[2]
+            subject=triple[0]
+            if(triple[1].startswith(file_name_reduce)):
+                name_properties=triple[1].split(".")[1]
+                name_range=triple[2].split(".")[1]
+                buildfirst="<owl:ObjectProperty rdf:about=\""+file_path+"#"+name_properties+"\">\n"
+                new_ont.write(buildfirst)
+                domain="    <rdfs:domain rdf:resource=\""+file_path+"#"+main_class+"\"/>\n"
+                new_ont.write(domain)
+                range="    <rdfs:range rdf:resource=\""+file_path+"#"+name_range+"\"/>\n"
+                new_ont.write(range)
+                new_ont.write("</owl:ObjectProperty>\n")
+                new_ont.write("\n")
+            if(triple[1]=="subClassOf"):
+                lines = new_ont.readlines()
+                alreay_exist = False
+                for line in lines:
+                    if line.startswith("<owl:Class rdf:about=\""+file_path+"#" + subject + "\">"):
+                        new_ont.write("\n")
+                        name_object = triple[2].split(".")[1]
+                        new_ont.write(
+                            "  <rdfs:subClassOf rdf:resource=\""+file_path+"#" + name_object + "\"/>\n")  # check a mon avis n'ecrit pas au bon endroit !
+                        alreay_exist = True
+                if not (alreay_exist):
+                    name_subject=triple[0].split(".")[1]
+                    name_object = triple[2].split(".")[1]
+                    buildfirst = "<owl:Class rdf:about=\""+file_path+"#" + name_subject + "\">"
+                    new_ont.write(buildfirst)
+                    new_ont.write("\n")
+                    subclass = "  <rdfs:subClassOf rdf:resource=\""+file_path+"#" + name_object + "\"/>"
+                    new_ont.write(subclass)
+                    new_ont.write("\n")
+                    new_ont.write("</owl:Class>")
+                    new_ont.write("\n")
+                    new_ont.write("\n")
+
+                #buildClasses(triple[1],triple[2])
+            if(triple[1]=="individualOf"):
+                name_subject = triple[0].split(".")[1]
+                name_object = triple[2].split(".")[1]
+                buildfirst = "<" + object + " rdf:about=\""+file_path+"#" + name_subject + " \">" + "\n"
+                new_ont.write(buildfirst)
+                type = "  <rdf:type rdf:resource=\"http://www.w3.org/2002/07/owl#NamedIndividual\"/>\n"
+                new_ont.write(type)
+                new_ont.write("</" + name_object + ">")
+                new_ont.write("\n")
+                new_ont.write("\n")
+                #buildIndivuals(triple[1],triple[2])
+
+
+
+
 
 
 
@@ -146,8 +206,8 @@ def gettriples2():
 
     file.close()
 
-    print(len(triple_list))
-
+    #print(len(triple_list))
+    return triple_list
 
 
 if __name__ == '__main__':
