@@ -7,7 +7,7 @@
  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
  xmlns:pizza_some="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#">
- <owl:Ontology rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some"/>")
+ <owl:Ontology rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some"/>
 
 
 <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meet">
@@ -22,44 +22,58 @@
   <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#toppings"/>
 </owl:Class>
 
-<pizza_some.sea_food rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#Anchoivies ">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</sea_food>
+<owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#pizza"/>
 
-<pizza_some.pizza rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#BBQ_Chicken_Pizza ">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</pizza>
+<owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#toppings"/>
 
-<pizza_some.meetPizza rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#BBQ_Chicken_Pizza ">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</meetPizza>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#Anchoivies">
+    <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#sea_food"/>
+</owl:NamedIndividual>
 
-<pizza_some.meet rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#Chicken ">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</meet>
 
-<pizza_some.toppings rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#Cheese ">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</toppings>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#BBQ_Chicken_Pizza">
+    <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#pizza"/>
+</owl:NamedIndividual>
 
-<pizza_some.pizza rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#Cheese_Pizza ">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</pizza>
 
-<pizza_some.toppings rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#Fruit ">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</toppings>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#BBQ_Chicken_Pizza">
+    <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meetPizza"/>
+</owl:NamedIndividual>
 
-<pizza_some.pizza rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#Hawaiin_Pizza ">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</pizza>
 
-<pizza_some.toppings rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#Mushroom ">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</toppings>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#Chicken">
+    <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meet"/>
+</owl:NamedIndividual>
+
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#Cheese">
+    <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#toppings"/>
+</owl:NamedIndividual>
+
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#Cheese_Pizza">
+    <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#pizza"/>
+</owl:NamedIndividual>
+
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#Fruit">
+    <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#toppings"/>
+</owl:NamedIndividual>
+
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#Hawaiin_Pizza">
+    <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#pizza"/>
+</owl:NamedIndividual>
+
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#Mushroom">
+    <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#toppings"/>
+</owl:NamedIndividual>
+
 
 <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#hasToppings">
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#looooool"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#pizza"/>
     <rdfs:range rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#toppings"/>
 </owl:ObjectProperty>
 
+</rdf:RDF>

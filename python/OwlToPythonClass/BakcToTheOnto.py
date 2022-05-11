@@ -44,7 +44,6 @@ from OwlToPythonClass.owl_object import *
 link="./output/output_pizza_some.xml"
 lenght_link= len(link.split("/"))
 name_file=link.split("/")[lenght_link-1]
-main_class="looooool"
 #express the name of the file that we have in all rdf:about
 
 file_name_reduce=name_file.split('.')[0].removeprefix('output_')
@@ -53,16 +52,16 @@ def main():
     with open("./output/new_pizza.owl", "w+", encoding="utf-8") as new_ont:
         #header
         new_ont.write("<?xml version=\"1.0\"?>\n")
-        new_ont.write("<rdf:RDF xmlns=\"http://www.semanticweb.org/hamza/ontologies/2022/3/"+file_name_reduce+"#\"\n "
-                      "xml:base=\"http://www.semanticweb.org/hamza/ontologies/2022/3/"+file_name_reduce+"\" \n "
+        new_ont.write("<rdf:RDF xmlns=\""+file_path+"#\"\n "
+                      "xml:base=\""+file_path+"\" \n "
                       "xmlns:owl=\"http://www.w3.org/2002/07/owl#\"\n "
                       "xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"\n "
                       "xmlns:xml=\"http://www.w3.org/XML/1998/namespace\"\n "
                       "xmlns:xsd=\"http://www.w3.org/2001/XMLSchema#\"\n "
                       "xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\"\n "
-                      "xmlns:"+file_name_reduce+"=\"http://www.semanticweb.org/hamza/ontologies/2022/3/"+file_name_reduce+"#\">\n "
-                      "<owl:Ontology rdf:about=\"http://www.semanticweb.org/hamza/ontologies/2022/3/"+file_name_reduce+""
-                      "\"/>\")\n\n\n")
+                      "xmlns:"+file_name_reduce+"=\""+file_path+"#\">\n "
+                      "<owl:Ontology rdf:about=\""+file_path+""
+                      "\"/>\n\n\n")
 
         triples=gettriples2()
         for triple in triples:
@@ -72,9 +71,10 @@ def main():
             if(triple[1].startswith(file_name_reduce)):
                 name_properties=triple[1].split(".")[1]
                 name_range=triple[2].split(".")[1]
+                name_domain=triple[0].split(".")[1]
                 buildfirst="<owl:ObjectProperty rdf:about=\""+file_path+"#"+name_properties+"\">\n"
                 new_ont.write(buildfirst)
-                domain="    <rdfs:domain rdf:resource=\""+file_path+"#"+main_class+"\"/>\n"
+                domain="    <rdfs:domain rdf:resource=\""+file_path+"#"+name_domain+"\"/>\n"
                 new_ont.write(domain)
                 range="    <rdfs:range rdf:resource=\""+file_path+"#"+name_range+"\"/>\n"
                 new_ont.write(range)
@@ -92,29 +92,47 @@ def main():
                         alreay_exist = True
                 if not (alreay_exist):
                     name_subject=triple[0].split(".")[1]
-                    name_object = triple[2].split(".")[1]
-                    buildfirst = "<owl:Class rdf:about=\""+file_path+"#" + name_subject + "\">"
-                    new_ont.write(buildfirst)
-                    new_ont.write("\n")
-                    subclass = "  <rdfs:subClassOf rdf:resource=\""+file_path+"#" + name_object + "\"/>"
-                    new_ont.write(subclass)
-                    new_ont.write("\n")
-                    new_ont.write("</owl:Class>")
+                    if(triple[2]=="Thing"):
+                        name_object=file_name_reduce+"."+triple[2]
+                        name_subject=triple[0].split(".")[1]
+                        build="<owl:Class rdf:about=\""+file_path+"#"+name_subject+"\"/>"
+                        new_ont.write(build)
+                    else:
+                        name_object = triple[2].split(".")[1]
+                        buildfirst = "<owl:Class rdf:about=\""+file_path+"#" + name_subject + "\">"
+                        new_ont.write(buildfirst)
+                        new_ont.write("\n")
+                        subclass = "  <rdfs:subClassOf rdf:resource=\""+file_path+"#" + name_object + "\"/>"
+                        new_ont.write(subclass)
+                        new_ont.write("\n")
+                        new_ont.write("</owl:Class>")
                     new_ont.write("\n")
                     new_ont.write("\n")
 
                 #buildClasses(triple[1],triple[2])
             if(triple[1]=="individualOf"):
+                #version1 didn't load in protégé
+                # name_subject = triple[0].split(".")[1]
+                # name_object = triple[2].split(".")[1]
+                # buildfirst = "<" + object + " rdf:about=\""+file_path+"#" + name_subject + " \">" + "\n"
+                # new_ont.write(buildfirst)
+                # type = "  <rdf:type rdf:resource=\"http://www.w3.org/2002/07/owl#NamedIndividual\"/>\n"
+                # new_ont.write(type)
+                # new_ont.write("</" + name_object + ">")
+                # new_ont.write("\n")
+                # new_ont.write("\n")
+                #version2 :
                 name_subject = triple[0].split(".")[1]
                 name_object = triple[2].split(".")[1]
-                buildfirst = "<" + object + " rdf:about=\""+file_path+"#" + name_subject + " \">" + "\n"
+                buildfirst="<owl:NamedIndividual rdf:about=\""+file_path+"#"+name_subject+"\">\n"
                 new_ont.write(buildfirst)
-                type = "  <rdf:type rdf:resource=\"http://www.w3.org/2002/07/owl#NamedIndividual\"/>\n"
+                type="    <rdf:type rdf:resource=\""+file_path+"#"+name_object+"\"/>\n"
                 new_ont.write(type)
-                new_ont.write("</" + name_object + ">")
+                new_ont.write("</owl:NamedIndividual>\n")
                 new_ont.write("\n")
                 new_ont.write("\n")
                 #buildIndivuals(triple[1],triple[2])
+        new_ont.write("</rdf:RDF>")
 
 
 
