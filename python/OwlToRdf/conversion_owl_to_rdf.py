@@ -25,6 +25,27 @@ def generate_triple_list_subclass():
 
     return liste_triple
 
+def get_all_classes():
+    onto_classes = list(default_world.classes())
+    classes = []
+    for iri in onto_classes:
+        iri = str(iri)
+        classes.append(iri)
+    return classes
+
+def add_classes(subclasses, all_classes):
+    for cla in all_classes:
+        cla_is_to_add = True
+
+        for t in subclasses:
+            if cla == t[0]:
+                cla_is_to_add = False
+
+        if cla_is_to_add:
+            subclasses.append((cla, "subClassOf", "Thing"))
+
+    return subclasses
+
 def generate_triple_list_individuals():
     liste_triple = []
 
@@ -204,14 +225,14 @@ def create_output(OUTPUT_FILE, subclasses, individuals, properties, equivalent):
 
 def main():
     
-    ONTOLOGY_NAME = "pizza"
+    ONTOLOGY_NAME = "pizza_some"
     DEFAULT = 0     # 1 to use the script as it should be in default
 
-    PRINT_INFO = 0  # 0 for no and 1 for yes
+    PRINT_INFO = 1  # 0 for no and 1 for yes
     ONTOLOGY = f"resource/{ONTOLOGY_NAME}.owl"
     CREATE_OUTPUT = 1  # 0 for no and 1 for yes
-    STANDART_OUTPUT = 1
-    OUTPUT_FILE = f"output/standard_{ONTOLOGY_NAME}.xml"
+    STANDART_OUTPUT = 0
+    OUTPUT_FILE = f"output/{ONTOLOGY_NAME}.xml"
     REASONER = 1  # 0 for no and 1 for yes
     KEEP_REASONER_FILE = 1  # 0 for no and 1 for yes
     ONTOLOGY_AFTER_REASONER = f"resource/reasoner/{ONTOLOGY_NAME}.owl"
@@ -286,6 +307,10 @@ def main():
     get_ontology(ONTOLOGY).load()
 
     subclasses = generate_triple_list_subclass()
+
+    all_classes = get_all_classes()
+
+    subclasses = add_classes(subclasses, all_classes)
 
     individuals = generate_triple_list_individuals()
 
