@@ -3,4 +3,3 @@
          <rdf:Description rdf:about="${object}"/>
     </ex:${predicate}>
 </rdf:Description>
-
