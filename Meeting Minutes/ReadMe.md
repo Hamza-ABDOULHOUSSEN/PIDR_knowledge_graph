@@ -19,3 +19,4 @@ This folder contains the meeting minutes of the project
 - [May 02nd 2022](Markdown/2022_05_02.md)
 - [May 04th 2022](Markdown/2022_05_04.md)
 - [May 06th 2022](Markdown/2022_05_06.md)
+- [May 11th 2022](Markdown/2022_05_11.md)
