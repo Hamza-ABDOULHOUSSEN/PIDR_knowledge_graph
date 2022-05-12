@@ -25,6 +25,27 @@ def generate_triple_list_subclass():
 
     return liste_triple
 
+def get_all_classes():
+    onto_classes = list(default_world.classes())
+    classes = []
+    for iri in onto_classes:
+        iri = str(iri)
+        classes.append(iri)
+    return classes
+
+def add_classes(subclasses, all_classes):
+    for cla in all_classes:
+        cla_is_to_add = True
+
+        for t in subclasses:
+            if cla == t[0]:
+                cla_is_to_add = False
+
+        if cla_is_to_add:
+            subclasses.append((cla, "subClassOf", "Thing"))
+
+    return subclasses
+
 def generate_triple_list_individuals():
     liste_triple = []
 
@@ -101,6 +122,24 @@ def generate_triple_list_equivalent():
         liste_triple.append((cla1, 'equivalentClass', cla2))
 
     return liste_triple
+
+def remove_restriction(triples):
+    list_of_restrictions = [' & ', ' | ', 'Not(', 'some(', 'only(', 'value(', 'min(', 'max(']
+
+    new_triples = []
+
+    for triple in triples:
+        add = True
+        for elem in triple:
+            for restr in list_of_restrictions:
+
+                if restr in elem:
+                    add = False
+
+        if add:
+            new_triples.append(triple)
+
+    return new_triples
 
 def print_info(subclasses, individuals, properties, equivalent):
     # TRY TO PRINT ALL GRAPH INFO
@@ -186,13 +225,14 @@ def create_output(OUTPUT_FILE, subclasses, individuals, properties, equivalent):
 
 def main():
     
-    ONTOLOGY_NAME = "Geography"
+    ONTOLOGY_NAME = "pizza_some"
     DEFAULT = 0     # 1 to use the script as it should be in default
 
-    PRINT_INFO = 0  # 0 for no and 1 for yes
+    PRINT_INFO = 1  # 0 for no and 1 for yes
     ONTOLOGY = f"resource/{ONTOLOGY_NAME}.owl"
     CREATE_OUTPUT = 1  # 0 for no and 1 for yes
-    OUTPUT_FILE = f"output/output_{ONTOLOGY_NAME}.xml"
+    STANDART_OUTPUT = 0
+    OUTPUT_FILE = f"output/{ONTOLOGY_NAME}.xml"
     REASONER = 1  # 0 for no and 1 for yes
     KEEP_REASONER_FILE = 1  # 0 for no and 1 for yes
     ONTOLOGY_AFTER_REASONER = f"resource/reasoner/{ONTOLOGY_NAME}.owl"
@@ -201,6 +241,7 @@ def main():
         PRINT_INFO = 0
         ONTOLOGY = ""
         CREATE_OUTPUT = 0
+        STANDART_OUTPUT = 0
         OUTPUT_FILE = ""
         REASONER = 0
         KEEP_REASONER_FILE = 0
@@ -230,6 +271,8 @@ def main():
             i = i + 1
             CREATE_OUTPUT = 1
             OUTPUT_FILE = sys.argv[i]
+        elif sys.argv[i] == "-s":
+            STANDART_OUTPUT = 1
         elif sys.argv[i] == "-r":
             REASONER = 1
             ONTOLOGY_AFTER_REASONER = ONTOLOGY[:-4] + "_reasoner_temp.owl"
@@ -265,11 +308,21 @@ def main():
 
     subclasses = generate_triple_list_subclass()
 
+    all_classes = get_all_classes()
+
+    subclasses = add_classes(subclasses, all_classes)
+
     individuals = generate_triple_list_individuals()
 
     properties = generate_triple_list_object_properties()
 
     equivalent = generate_triple_list_equivalent()
+
+    if STANDART_OUTPUT:
+        subclasses = remove_restriction(subclasses)
+        individuals = remove_restriction(individuals)
+        properties = remove_restriction(properties)
+        equivalent = remove_restriction(equivalent)
 
     if PRINT_INFO:
         print_info(subclasses, individuals, properties, equivalent)
