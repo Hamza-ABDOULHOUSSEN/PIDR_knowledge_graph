@@ -2,7 +2,7 @@ import graphviz
 
 from OwlToRdf.conversion_owl_to_rdf import *
 
-ONTOLOGY_NAME = "pizza_some"
+ONTOLOGY_NAME = "pizza"
 ONTOLOGY = f"file://resource/{ONTOLOGY_NAME}.owl"
 
 
@@ -33,6 +33,10 @@ def main():
     subclasses = generate_triple_list_subclass()
     individuals = generate_triple_list_individuals()
     properties = generate_triple_list_object_properties()
+
+    subclasses = remove_restriction(subclasses)
+    individuals = remove_restriction(individuals)
+    properties = remove_restriction(properties)
 
     complete_graph_subclasses(G, subclasses)
     complete_graph_individuals(G, individuals)
