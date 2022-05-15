@@ -2,13 +2,13 @@
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:ex="http://example.org/stuff/1.0/">
 
-<rdf:Description rdf:about="pizza_some.meet">
+<rdf:Description rdf:about="pizza_some.meat">
     <ex:subClassOf>
          <rdf:Description rdf:about="pizza_some.toppings"/>
     </ex:subClassOf>
 </rdf:Description>
 
-<rdf:Description rdf:about="pizza_some.meetPizza">
+<rdf:Description rdf:about="pizza_some.meatPizza">
     <ex:subClassOf>
          <rdf:Description rdf:about="pizza_some.pizza"/>
     </ex:subClassOf>
@@ -46,13 +46,13 @@
 
 <rdf:Description rdf:about="pizza_some.BBQ_Chicken_Pizza">
     <ex:individualOf>
-         <rdf:Description rdf:about="pizza_some.meetPizza"/>
+         <rdf:Description rdf:about="pizza_some.meatPizza"/>
     </ex:individualOf>
 </rdf:Description>
 
 <rdf:Description rdf:about="pizza_some.Chicken">
     <ex:individualOf>
-         <rdf:Description rdf:about="pizza_some.meet"/>
+         <rdf:Description rdf:about="pizza_some.meat"/>
     </ex:individualOf>
 </rdf:Description>
 
@@ -92,9 +92,9 @@
     </ex:pizza_some.hasToppings>
 </rdf:Description>
 
-<rdf:Description rdf:about="pizza_some.meetPizza">
+<rdf:Description rdf:about="pizza_some.meatPizza">
     <ex:equivalentClass>
-         <rdf:Description rdf:about="pizza_some.hasToppings.some(pizza_some.meet)"/>
+         <rdf:Description rdf:about="pizza_some.hasToppings.some(pizza_some.meat)"/>
     </ex:equivalentClass>
 </rdf:Description>
 

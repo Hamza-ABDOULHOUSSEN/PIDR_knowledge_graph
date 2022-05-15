@@ -10,11 +10,11 @@
  <owl:Ontology rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some"/>
 
 
-<owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meet">
+<owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meat">
   <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#toppings"/>
 </owl:Class>
 
-<owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meetPizza">
+<owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meatPizza">
   <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#pizza"/>
 </owl:Class>
 
@@ -37,12 +37,12 @@
 
 
 <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#BBQ_Chicken_Pizza">
-    <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meetPizza"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meatPizza"/>
 </owl:NamedIndividual>
 
 
 <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#Chicken">
-    <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meet"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meat"/>
 </owl:NamedIndividual>
 
 

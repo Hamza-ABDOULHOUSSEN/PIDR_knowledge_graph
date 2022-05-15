@@ -42,21 +42,21 @@
     
 
 
-    <!-- http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meet -->
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meat -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meet">
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meat">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#toppings"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meetPizza -->
+    <!-- http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meatPizza -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meetPizza">
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meatPizza">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#hasToppings"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meet"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meat"/>
             </owl:Restriction>
         </owl:equivalentClass>
     </owl:Class>
@@ -131,7 +131,7 @@
     <!-- http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#Chicken -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#Chicken">
-        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meet"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2022/3/pizza_some#meat"/>
     </owl:NamedIndividual>
     
 

@@ -17,16 +17,16 @@
 
 <owl:Class rdf:about="#toppings"/>
 
-<owl:Class rdf:about="#meet">
+<owl:Class rdf:about="#meat">
   <rdfs:subClassOf rdf:resource="#toppings"/>
 </owl:Class>
 
-<owl:Class rdf:about="#meetPizza">
+<owl:Class rdf:about="#meatPizza">
   <rdfs:subClassOf rdf:resource="#pizza"/>
   <owl:equivalentClass>
     <owl:Restriction>
       <owl:onProperty rdf:resource="#hasToppings"/>
-      <owl:someValuesFrom rdf:resource="#meet"/>
+      <owl:someValuesFrom rdf:resource="#meat"/>
     </owl:Restriction>
   </owl:equivalentClass>
 </owl:Class>
@@ -41,13 +41,13 @@
 
 <pizza rdf:about="#BBQ_Chicken_Pizza">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdf:type rdf:resource="#meetPizza"/>
+  <rdf:type rdf:resource="#meatPizza"/>
   <hasToppings rdf:resource="#Chicken"/>
 </pizza>
 
-<meet rdf:about="#Chicken">
+<meat rdf:about="#Chicken">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-</meet>
+</meat>
 
 <toppings rdf:about="#Cheese">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
