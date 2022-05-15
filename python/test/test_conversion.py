@@ -23,7 +23,7 @@ triple_list = generate_triple_list_subclass()
 properties = generate_triple_list_object_properties()
 
 def test_extractor_subclass():
-    assert len(triple_list) == 28
+    assert len(triple_list) == 18
 
     # get the list of pieces subclass
     sub_list = []
