@@ -1,0 +1,1103 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ex="http://example.org/stuff/1.0/">
+
+<rdf:Description rdf:about="Chess_Ontology.Bishops">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pieces"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.File">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Chess_Ontology.Board"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Kings">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pieces"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Knights">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pieces"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Movements">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Chess_Ontology.Rules"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Pawns">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pieces"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Queens">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pieces"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Rank">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Chess_Ontology.Board"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Rooks">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pieces"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Win_condition">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Chess_Ontology.Rules"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.King's_movement">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Chess_Ontology.Movements"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Pawn's_movement">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Chess_Ontology.Movements"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.AI">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Chess_Ontology.Players"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Castle">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Chess_Ontology.King's_movement"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Cell">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Chess_Ontology.Board"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Match_moves">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Chess_Ontology.Match"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.One_cell_one_piece">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Chess_Ontology.Movements"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Person">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Chess_Ontology.Players"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Pieces">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Thing"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Match">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Thing"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Players">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Thing"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Board">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Thing"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Rules">
+    <ex:subClassOf>
+         <rdf:Description rdf:about="Thing"/>
+    </ex:subClassOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.B1">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Bishops"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.c1">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.B2">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Bishops"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.f1">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.B3">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Bishops"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.c8">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.B4">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Bishops"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.f8">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Double_forward">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawn's_movement"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Eat">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawn's_movement"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.En_passant">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawn's_movement"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.K1">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Kings"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.e1">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.K2">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Kings"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.e8">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.N1">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Knights"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.b1">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.N2">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Knights"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.g1">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.N3">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Knights"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.b8">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.N4">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Knights"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.g8">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.One_forward">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawn's_movement"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.P1">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawns"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.a2">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.P10">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawns"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.b7">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.P11">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawns"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.c7">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.P12">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawns"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.d7">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.P13">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawns"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.e7">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.P14">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawns"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.f7">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.P15">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawns"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.g7">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.P16">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawns"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.h7">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.P2">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawns"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.b2">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.P3">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawns"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.c2">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.P4">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawns"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.d2">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.P5">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawns"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.e2">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.P6">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawns"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.f2">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.P7">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawns"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.g2">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.P8">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawns"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.h2">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.P9">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawns"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.a7">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Promotion">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Pawn's_movement"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Q1">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Queens"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.d1">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Q2">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Queens"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.d8">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.R1">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Rooks"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.a1">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.R2">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Rooks"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.h1">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.R3">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Rooks"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.a8">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.R4">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Rooks"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.h8">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Scholar_mate">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Match"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Scholar_mate_move1">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Match_moves"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Scholar_mate_move2">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Match_moves"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.e4">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Scholar_mate_move3">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Match_moves"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.e5">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Scholar_mate_move4">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Match_moves"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.c4">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Scholar_mate_move5">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Match_moves"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.c6">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Scholar_mate_move6">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Match_moves"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.h5">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Scholar_mate_move7">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Match_moves"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.f6">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Shortest_game">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Match"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Shortest_game_move1">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Match_moves"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Shortest_game_move2">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Match_moves"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.g4">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Shortest_game_move3">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Match_moves"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Shortest_game_move4">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Match_moves"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.f3">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.h4">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.a">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Rank"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.1">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.File"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.2">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.File"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.a3">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.3">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.File"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.a4">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.4">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.File"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.a5">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.5">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.File"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.a6">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.6">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.File"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.7">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.File"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.8">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.File"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.b">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Rank"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.b3">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.b4">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.b5">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.b6">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.c">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Rank"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.c3">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.c5">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.d">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Rank"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.d3">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.d4">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.d5">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.d6">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.e">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Rank"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.e3">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.e6">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.f">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Rank"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.f4">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.f5">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.g">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Rank"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.g3">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.g5">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.g6">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.h">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Rank"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.h3">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.h6">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.one_square_move">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.King's_movement"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Bishop's_movment">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Movements"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.King's_side_castle">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Castle"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Knight's_movment">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Movements"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Queen's_movment">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Movements"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Queen's_side_castle">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Castle"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Rook's_movment">
+    <ex:individualOf>
+         <rdf:Description rdf:about="Chess_Ontology.Movements"/>
+    </ex:individualOf>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Pieces">
+    <ex:Chess_Ontology.Make>
+         <rdf:Description rdf:about="Chess_Ontology.Movements"/>
+    </ex:Chess_Ontology.Make>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Match">
+    <ex:Chess_Ontology.First_move>
+         <rdf:Description rdf:about="Chess_Ontology.Match_moves"/>
+    </ex:Chess_Ontology.First_move>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Match_moves">
+    <ex:Chess_Ontology.Is_check>
+         <rdf:Description rdf:about="Chess_Ontology.Kings"/>
+    </ex:Chess_Ontology.Is_check>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Cell">
+    <ex:Chess_Ontology.Is_file>
+         <rdf:Description rdf:about="Chess_Ontology.File"/>
+    </ex:Chess_Ontology.Is_file>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Cell">
+    <ex:Chess_Ontology.Is_rank>
+         <rdf:Description rdf:about="Chess_Ontology.Rank"/>
+    </ex:Chess_Ontology.Is_rank>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Match_moves">
+    <ex:Chess_Ontology.Moving_Piece>
+         <rdf:Description rdf:about="Chess_Ontology.Pieces"/>
+    </ex:Chess_Ontology.Moving_Piece>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Match_moves">
+    <ex:Chess_Ontology.Movment_is>
+         <rdf:Description rdf:about="Chess_Ontology.Movements"/>
+    </ex:Chess_Ontology.Movment_is>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Match_moves">
+    <ex:Chess_Ontology.Next_move>
+         <rdf:Description rdf:about="Chess_Ontology.Match_moves"/>
+    </ex:Chess_Ontology.Next_move>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Pieces">
+    <ex:Chess_Ontology.Start_cell_is>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:Chess_Ontology.Start_cell_is>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Match_moves">
+    <ex:Chess_Ontology.To_cell>
+         <rdf:Description rdf:about="Chess_Ontology.Cell"/>
+    </ex:Chess_Ontology.To_cell>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Match">
+    <ex:Chess_Ontology.Where_black_player_is>
+         <rdf:Description rdf:about="Chess_Ontology.Players"/>
+    </ex:Chess_Ontology.Where_black_player_is>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Match">
+    <ex:Chess_Ontology.Where_white_player_is>
+         <rdf:Description rdf:about="Chess_Ontology.Players"/>
+    </ex:Chess_Ontology.Where_white_player_is>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Pieces">
+    <ex:Chess_Ontology.eat>
+         <rdf:Description rdf:about="Chess_Ontology.Bishops"/>
+    </ex:Chess_Ontology.eat>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Pieces">
+    <ex:Chess_Ontology.eat>
+         <rdf:Description rdf:about="Chess_Ontology.Knights"/>
+    </ex:Chess_Ontology.eat>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Pieces">
+    <ex:Chess_Ontology.eat>
+         <rdf:Description rdf:about="Chess_Ontology.Pawns"/>
+    </ex:Chess_Ontology.eat>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Pieces">
+    <ex:Chess_Ontology.eat>
+         <rdf:Description rdf:about="Chess_Ontology.Queens"/>
+    </ex:Chess_Ontology.eat>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Pieces">
+    <ex:Chess_Ontology.eat>
+         <rdf:Description rdf:about="Chess_Ontology.Rooks"/>
+    </ex:Chess_Ontology.eat>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.File">
+    <ex:Chess_Ontology.Has_value>
+         <rdf:Description rdf:about="<class 'str'>"/>
+    </ex:Chess_Ontology.Has_value>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Rank">
+    <ex:Chess_Ontology.Has_value>
+         <rdf:Description rdf:about="<class 'str'>"/>
+    </ex:Chess_Ontology.Has_value>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Pieces">
+    <ex:Chess_Ontology.Name_is>
+         <rdf:Description rdf:about="<class 'str'>"/>
+    </ex:Chess_Ontology.Name_is>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Cell">
+    <ex:Chess_Ontology.Name_is>
+         <rdf:Description rdf:about="<class 'str'>"/>
+    </ex:Chess_Ontology.Name_is>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Match_moves">
+    <ex:Chess_Ontology.Notation>
+         <rdf:Description rdf:about="<class 'str'>"/>
+    </ex:Chess_Ontology.Notation>
+</rdf:Description>
+
+<rdf:Description rdf:about="Chess_Ontology.Pieces">
+    <ex:Chess_Ontology.Side_is>
+         <rdf:Description rdf:about="<class 'str'>"/>
+    </ex:Chess_Ontology.Side_is>
+</rdf:Description>
+
+</rdf:RDF>

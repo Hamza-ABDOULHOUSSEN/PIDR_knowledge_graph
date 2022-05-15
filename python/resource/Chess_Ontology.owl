@@ -118,6 +118,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Movment_is -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Movment_is">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Movements"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Next_move -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Next_move">
@@ -133,7 +142,6 @@
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Promoted_to -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Promoted_to">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Promotion"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Bishops"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Knights"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Queens"/>
@@ -401,34 +409,10 @@ See also Pawn&apos;s movement.</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Bishop&apos;s_movement -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Bishop&apos;s_movement">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Movements"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A bishop can move any number of squares diagonally, but cannot leap over other pieces.</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rule :
-begining cell : (U,V)
-diagonal movement is {(X,Y) a cell different of (U,V) where |U-X|=|V-Y|}</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#King&apos;s_movement -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#King&apos;s_movement">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Movements"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Knight&apos;s_movement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Knight&apos;s_movement -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Knight&apos;s_movement">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Movements"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A knight moves to any of the closest squares that are not on the same rank, file, or diagonal. (Thus the move forms an &quot;L&quot;-shape: two squares vertically and one square horizontally, or two squares horizontally and one square vertically.) The knight is the only piece that can leap over other pieces.</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Begining cell : (U,V)
-Ending cells possible = {(X,Y) a cell where (|U-X| ==2 AND |V-Y|==1) OR (|U-X| ==1 AND |V-Y|==2)}</rdfs:comment>
     </owl:Class>
     
 
@@ -437,16 +421,6 @@ Ending cells possible = {(X,Y) a cell where (|U-X| ==2 AND |V-Y|==1) OR (|U-X| =
 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Pawn&apos;s_movement">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Movements"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Rook&apos;s_movement -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Rook&apos;s_movement">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Movements"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Begining cell : (U,V)
-Ending cell = {(X,Y) a cell where (|U-X|==0 AND NOT |V-Y|==0) OR (|V-Y|==0 AND NOT |U-X|==0))</rdfs:comment>
     </owl:Class>
     
 
@@ -495,33 +469,6 @@ Castling is still permitted if the rook is under attack, or if the rook crosses 
     
 
 
-    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Double_forward -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Double_forward">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Pawn&apos;s_movement"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On its first move, a pawn can advance two squares along the same file, provided both squares are unoccupied</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Eat -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Eat">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Pawn&apos;s_movement"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pawn can capture an opponent&apos;s piece on a square diagonally in front of it by moving to that square.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#En_passant -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#En_passant">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Pawn&apos;s_movement"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When a pawn makes a two-step advance from its starting position and there is an opponent&apos;s pawn on a square next to the destination square on an adjacent file, then the opponent&apos;s pawn can capture it en passant (&quot;in passing&quot;), moving to the square the pawn passed over.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Match_moves">
@@ -540,24 +487,6 @@ Castling is still permitted if the rook is under attack, or if the rook crosses 
     
 
 
-    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#One_forward -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#One_forward">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Pawn&apos;s_movement"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pawn can move forward to the unoccupied square immediately in front of it on the same file.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#One_square_move -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#One_square_move">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#King&apos;s_movement"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The king moves one square in any direction.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Person -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Person">
@@ -571,34 +500,6 @@ Castling is still permitted if the rook is under attack, or if the rook crosses 
 
     <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Players">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A player is a AI or a person. He represents a side for a match. He decides which piece is moving.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Promotion -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Promotion">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Pawn&apos;s_movement"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">When a pawn advances to its eighth rank, as part of the move, it is promoted and must be exchanged for the player&apos;s choice of queen, rook, bishop, or knight of the same color.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Queen&apos;s_movement -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Queen&apos;s_movement">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Bishop&apos;s_movement"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Rook&apos;s_movement"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Movements"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A queen combines the power of a rook and bishop and can move any number of squares along a rank, file, or diagonal, but cannot leap over other pieces.</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Begin cell = (U,V)
-Ending cell = Rook&apos;s_movement(U,V) U Bishop&apos;s_movement(U,V)</rdfs:comment>
     </owl:Class>
     
 
@@ -654,6 +555,30 @@ Ending cell = Rook&apos;s_movement(U,V) U Bishop&apos;s_movement(U,V)</rdfs:comm
         <chess-ontology-2:Start_cell_is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#f8"/>
         <chess-ontology-2:Name_is rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bishop</chess-ontology-2:Name_is>
         <chess-ontology-2:Side_is>Black</chess-ontology-2:Side_is>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Double_forward -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Double_forward">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Pawn&apos;s_movement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Eat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Eat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Pawn&apos;s_movement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#En_passant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#En_passant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Pawn&apos;s_movement"/>
     </owl:NamedIndividual>
     
 
@@ -720,6 +645,14 @@ Ending cell = Rook&apos;s_movement(U,V) U Bishop&apos;s_movement(U,V)</rdfs:comm
         <chess-ontology-2:Start_cell_is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#g8"/>
         <chess-ontology-2:Name_is rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Knight</chess-ontology-2:Name_is>
         <chess-ontology-2:Side_is>Black</chess-ontology-2:Side_is>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#One_forward -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#One_forward">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Pawn&apos;s_movement"/>
     </owl:NamedIndividual>
     
 
@@ -896,6 +829,14 @@ Ending cell = Rook&apos;s_movement(U,V) U Bishop&apos;s_movement(U,V)</rdfs:comm
         <chess-ontology-2:Start_cell_is rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#a7"/>
         <chess-ontology-2:Name_is>Pawn</chess-ontology-2:Name_is>
         <chess-ontology-2:Side_is>Black</chess-ontology-2:Side_is>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Promotion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Promotion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Pawn&apos;s_movement"/>
     </owl:NamedIndividual>
     
 
@@ -1890,6 +1831,14 @@ Ending cell = Rook&apos;s_movement(U,V) U Bishop&apos;s_movement(U,V)</rdfs:comm
     
 
 
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#one_square_move -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#one_square_move">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#King&apos;s_movement"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#1">
@@ -1962,6 +1911,14 @@ Ending cell = Rook&apos;s_movement(U,V) U Bishop&apos;s_movement(U,V)</rdfs:comm
     
 
 
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Bishop&apos;s_movment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Bishop&apos;s_movment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Movements"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#King&apos;s_side_castle -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#King&apos;s_side_castle">
@@ -1970,10 +1927,34 @@ Ending cell = Rook&apos;s_movement(U,V) U Bishop&apos;s_movement(U,V)</rdfs:comm
     
 
 
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Knight&apos;s_movment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Knight&apos;s_movment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Movements"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Queen&apos;s_movment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Queen&apos;s_movment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Movements"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Queen&apos;s_side_castle -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Queen&apos;s_side_castle">
         <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Castle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Rook&apos;s_movment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Rook&apos;s_movment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Movements"/>
     </owl:NamedIndividual>
     
 
@@ -1987,23 +1968,28 @@ Ending cell = Rook&apos;s_movement(U,V) U Bishop&apos;s_movement(U,V)</rdfs:comm
      -->
 
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Bishop&apos;s_movement"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#King&apos;s_movement"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Knight&apos;s_movement"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Pawn&apos;s_movement"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/Chess_Ontology#Rook&apos;s_movement"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Queen&apos;s_movement"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
         <owl:distinctMembers rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#B1"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#B2"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#B3"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#B4"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Double_forward"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#En_passant"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#One_forward"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Promotion"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#one_square_move"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Bishop&apos;s_movment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#King&apos;s_side_castle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Knight&apos;s_movment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Queen&apos;s_movment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Queen&apos;s_side_castle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/killi/ontologies/2022/0/chess-ontology-2#Rook&apos;s_movment"/>
         </owl:distinctMembers>
     </rdf:Description>
     <rdf:Description>
