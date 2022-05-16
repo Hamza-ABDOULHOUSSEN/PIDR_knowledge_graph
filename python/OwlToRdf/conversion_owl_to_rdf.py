@@ -232,7 +232,7 @@ def main():
     ONTOLOGY = f"resource/{ONTOLOGY_NAME}.owl"
     CREATE_OUTPUT = 1  # 0 for no and 1 for yes
     STANDART_OUTPUT = 0
-    OUTPUT_FILE = f"output/{ONTOLOGY_NAME}.xml"
+    OUTPUT_FILE = f"output/output_{ONTOLOGY_NAME}.xml"
     REASONER = 1  # 0 for no and 1 for yes
     KEEP_REASONER_FILE = 1  # 0 for no and 1 for yes
     ONTOLOGY_AFTER_REASONER = f"resource/reasoner/{ONTOLOGY_NAME}.owl"
